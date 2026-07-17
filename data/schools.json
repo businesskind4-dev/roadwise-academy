@@ -1,0 +1,22 @@
+[
+    {
+        "id": "leoba",
+        "name": "Leoba Driving School",
+        "location": "Gaborone",
+        "phone": "+267 71 911 795",
+        "email": "info@leoba.com",
+        "services": ["Practical Lessons", "Theory Test Assistance", "Vehicle Hire"],
+        "logo": "assets/images/schools/leoba-logo.jpeg",
+        "verified": true
+    },
+    {
+        "id": "casienova",
+        "name": "Casienova Holdings Pty Ltd",
+        "location": "Tlokweng",
+        "phone": "+267 71 911 795",
+        "email": "info@casienova.com",
+        "services": ["Practical Lessons", "Theory Test Assistance"],
+        "logo": "assets/images/schools/casienova-logo.jpeg",
+        "verified": true
+    }
+]

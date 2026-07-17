@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "category": "Road Signs",
+        "question": "What does a red circle with a white horizontal bar inside mean?",
+        "options": [
+            "No entry",
+            "Speed limit",
+            "No parking",
+            "One-way street"
+        ],
+        "correct": 0,
+        "explanation": "A red circle with a white horizontal bar indicates 'No Entry'. You must not enter this road or section of road."
+    },
+    {
+        "id": 2,
+        "category": "Rules of the Road",
+        "question": "When two vehicles approach an uncontrolled intersection from different roads at the same time, who has the right of way?",
+        "options": [
+            "The vehicle on the right",
+            "The vehicle on the left",
+            "The faster vehicle",
+            "The larger vehicle"
+        ],
+        "correct": 0,
+        "explanation": "In Botswana, the vehicle on the right has right of way at an uncontrolled intersection. Always yield to traffic approaching from your right."
+    },
+    {
+        "id": 3,
+        "category": "Safety",
+        "question": "What is the minimum following distance you should maintain in wet or rainy conditions?",
+        "options": [
+            "2 seconds",
+            "4 seconds",
+            "6 seconds",
+            "8 seconds"
+        ],
+        "correct": 1,
+        "explanation": "In wet conditions, you should maintain at least a 4-second following distance. This allows for longer stopping distances on slippery roads."
+    },
+    {
+        "id": 4,
+        "category": "Licencing",
+        "question": "If a driver accumulates 12 demerit points on their Botswana driving licence, what happens?",
+        "options": [
+            "Nothing, the driver is still fine",
+            "The driver receives a formal warning",
+            "The driver's licence is suspended",
+            "The driver must retake the theory test"
+        ],
+        "correct": 2,
+        "explanation": "In Botswana, accumulating 12 or more demerit points results in licence suspension. The driver may also be required to attend a defensive driving course."
+    },
+    {
+        "id": 5,
+        "category": "Road Signs",
+        "question": "What does a yellow diamond-shaped sign with a black arrow indicate?",
+        "options": [
+            "Bend or curve ahead",
+            "Sharp hairpin turn",
+            "Two-way traffic ahead",
+            "Merging traffic ahead"
+        ],
+        "correct": 0,
+        "explanation": "A yellow diamond-shaped sign with a black arrow indicates a bend or curve in the road ahead. Reduce your speed accordingly."
+    },
+    {
+        "id": 6,
+        "category": "Rules of the Road",
+        "question": "When overtaking a heavy vehicle on a two-lane road, what is the correct approach?",
+        "options": [
+            "Overtake quickly and return to your lane decisively",
+            "Overtake slowly to avoid wind turbulence",
+            "Only overtake if there is a designated passing lane",
+            "Wait for the heavy vehicle to signal you to overtake"
+        ],
+        "correct": 0,
+        "explanation": "Overtake quickly and decisively to minimize time spent in the oncoming lane. Be aware of the heavy vehicle's length and ensure you have adequate visibility."
+    },
+    {
+        "id": 7,
+        "category": "Vehicle Controls",
+        "question": "When is it legally appropriate to use your hazard warning lights?",
+        "options": [
+            "When parking illegally",
+            "When your vehicle is broken down or stationary",
+            "When overtaking another vehicle",
+            "When driving at high speed"
+        ],
+        "correct": 1,
+        "explanation": "Hazard warning lights should only be used to warn other road users of a stationary vehicle or an emergency situation. They are not for parking illegally or driving."
+    },
+    {
+        "id": 8,
+        "category": "Speed Limits",
+        "question": "What is the maximum speed limit on a Botswana highway outside a built-up area for a light motor vehicle?",
+        "options": [
+            "80 km/h",
+            "100 km/h",
+            "120 km/h",
+            "140 km/h"
+        ],
+        "correct": 2,
+        "explanation": "The maximum speed limit on highways outside built-up areas in Botswana is 120 km/h for light motor vehicles. Always adjust for road and weather conditions."
+    },
+    {
+        "id": 9,
+        "category": "Parking",
+        "question": "What is the minimum distance you must park from a fire hydrant?",
+        "options": [
+            "3 metres",
+            "5 metres",
+            "10 metres",
+            "15 metres"
+        ],
+        "correct": 1,
+        "explanation": "You must park at least 5 metres from a fire hydrant. This ensures emergency services have clear access in case of a fire."
+    },
+    {
+        "id": 10,
+        "category": "Rules of the Road",
+        "question": "When approaching a pedestrian crossing where pedestrians are waiting, you should:",
+        "options": [
+            "Speed up to clear the crossing quickly",
+            "Slow down and be prepared to stop",
+            "Sound your horn to warn pedestrians",
+            "Continue at the same speed"
+        ],
+        "correct": 1,
+        "explanation": "Always slow down and be prepared to stop at pedestrian crossings. Pedestrians have right of way once they are on the crossing or clearly waiting to cross."
+    }
+]
