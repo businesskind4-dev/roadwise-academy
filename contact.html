@@ -1035,6 +1035,16 @@
  .nav-toggle:not(.is-open),.nav-toggle:not(.is-open) svg{color:#000!important;stroke:#000!important}
 }
 @media (max-width: 768px) { .nav-toggle, .nav-toggle svg { color: #000 !important; stroke: #000 !important; } }
+/* Mobile footer layout */
+@media (max-width: 768px) {
+ .footer-grid { grid-template-columns: 1fr !important; gap: 24px !important; text-align: center !important; }
+ .footer-brand p { max-width: 100% !important; font-size: 0.9rem !important; }
+ .footer-brand .mini-stats { justify-content: center !important; }
+ .footer-contact li { justify-content: center !important; }
+ .footer-socials .social-link { width: 100% !important; justify-content: center !important; }
+ .footer { padding: 40px 16px 20px !important; }
+ .footer-socials .social-link .follower-badge { margin-left: 8px !important; }
+}
 </style>
 </head>
 
