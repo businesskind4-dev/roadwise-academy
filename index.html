@@ -1528,6 +1528,26 @@
  .pulse {
  animation: pulse-ring 2s infinite;
  }
+ /* Mobile navbar balance */
+ @media (max-width: 768px) {
+ .navbar {
+ padding: 12px 16px;
+ }
+ .nav-logo img {
+ max-height: 36px;
+ width: auto;
+ }
+ .nav-toggle {
+ font-size: 1.6rem;
+ padding: 4px 8px;
+ }
+ .nav-container {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 8px;
+ }
+ }
  </style>
 </head>
 
