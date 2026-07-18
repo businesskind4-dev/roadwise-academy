@@ -1,0 +1,22 @@
+{
+  "name": "roadwise-academy",
+  "version": "1.0.0",
+  "description": "Botswana's premier digital driving theory education platform",
+  "type": "module",
+  "scripts": {
+    "build": "node build-speed-insights.js",
+    "dev": "python3 -m http.server 8000",
+    "lint": "echo 'No linting configured for static HTML project'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "driving-theory",
+    "education",
+    "botswana"
+  ],
+  "author": "Road Wise Academy",
+  "license": "UNLICENSED"
+}
