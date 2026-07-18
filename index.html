@@ -1628,7 +1628,17 @@
   .nav-toggle.is-open::after { content: "✕"; font-size: 1.7rem; line-height: 1; }
   .nav-toggle:not(.is-open), .nav-toggle:not(.is-open) svg { color: #000 !important; stroke: #000 !important; }
 }
-@media (max-width: 768px) { .nav-toggle, .nav-toggle svg { color: #000 !important; stroke: #000 !important; } }
+@media (max-width: 768px) {
+  .nav-toggle {
+    color: #000000 !important;
+  }
+  .nav-toggle svg,
+  .nav-toggle i,
+  .nav-toggle [data-lucide] {
+    color: #000000 !important;
+    stroke: #000000 !important;
+  }
+}
 </style>
 </head>
 
