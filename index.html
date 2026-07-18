@@ -1626,7 +1626,9 @@
   img, svg, video, iframe { max-width: 100%; }
   .nav-toggle.is-open svg { display: none; }
   .nav-toggle.is-open::after { content: "✕"; font-size: 1.7rem; line-height: 1; }
+  .nav-toggle:not(.is-open), .nav-toggle:not(.is-open) svg { color: #000 !important; stroke: #000 !important; }
 }
+@media (max-width: 768px) { .nav-toggle, .nav-toggle svg { color: #000 !important; stroke: #000 !important; } }
 </style>
 </head>
 

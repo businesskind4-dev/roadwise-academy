@@ -1052,7 +1052,9 @@
   body.menu-open { overflow: hidden; } .container, .hero-grid, .hero-content, .hero-visual, .preview-card { width: 100%; max-width: 100%; min-width: 0; } .hero-grid { grid-template-columns: minmax(0,1fr) !important; } .hero-content, .hero-visual, .hero-buttons, .hero-stats { align-items: center; text-align: center; justify-content: center; } .heading-xl, .hero-title { font-size: clamp(2rem,9vw,2.8rem) !important; line-height: 1.1; } .hero-buttons { flex-direction: column; width: 100%; } .hero-buttons .btn { width: 100%; max-width: 17.5rem; margin-inline: auto; } img, svg, video, iframe { max-width: 100%; }
   .nav-toggle.is-open svg { display: none; }
   .nav-toggle.is-open::after { content: "✕"; font-size: 1.7rem; line-height: 1; }
+  .nav-toggle:not(.is-open), .nav-toggle:not(.is-open) svg { color: #000 !important; stroke: #000 !important; }
 }
+@media (max-width: 768px) { .nav-toggle, .nav-toggle svg { color: #000 !important; stroke: #000 !important; } }
 </style>
 </head>
 
