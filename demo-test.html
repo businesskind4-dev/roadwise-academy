@@ -1,1779 +1,1774 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Free Demo Test €“ Road Wise Academy</title>
- <meta name="description" content="Try our free Botswana driving theory demo test. Experience realistic questions, instant feedback, and see how Road Wise Academy prepares you to pass.">
- <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
-
- <!-- Open Graph -->
- <meta property="og:title" content="Free Demo Test €“ Road Wise Academy">
- <meta property="og:description" content="Experience our interactive driving theory demo test. 10 challenging questions with instant feedback.">
- <meta property="og:type" content="website">
- <meta property="og:url" content="https://roadwiseacademy.co.bw/demo-test.html">
- <meta property="og:image" content="https://roadwiseacademy.co.bw/assets/images/logo/logo.png">
-
- <!-- Google Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-
- <!-- Lucide Icons -->
- <script src="https://unpkg.com/lucide@latest" defer></script>
-
- <style>
- /* ================================================================
- ROAD WISE ACADEMY €” DEMO TEST STYLES
- ================================================================ */
-
- /* ---------- Reset & Variables ---------- */
- *,
- *::before,
- *::after {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- }
-
- :root {
- --rwa-red: #E31E24;
- --rwa-red-dark: #B8181D;
- --rwa-red-glow: rgba(227, 30, 36, 0.15);
- --rwa-black: #0A0A0A;
- --rwa-black-light: #1A1A1A;
- --rwa-white: #FFFFFF;
- --rwa-off-white: #F8F9FC;
- --rwa-grey: #EEF2F6;
- --rwa-grey-medium: #8A8F98;
- --rwa-grey-dark: #4A4D55;
-
- --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
- --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.07);
- --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.10);
- --shadow-glow: 0 30px 80px rgba(227, 30, 36, 0.18);
-
- --radius-sm: 12px;
- --radius-md: 20px;
- --radius-lg: 32px;
- --radius-full: 9999px;
-
- --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
- --font-heading: 'Poppins', 'Inter', sans-serif;
-
- --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
- }
-
- html {
- scroll-behavior: smooth;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- }
-
- body {
- font-family: var(--font-body);
- background: var(--rwa-off-white);
- color: var(--rwa-black);
- line-height: 1.6;
- overflow-x: hidden;
- min-height: 100vh;
- }
-
- a {
- text-decoration: none;
- color: inherit;
- }
- img {
- max-width: 100%;
- display: block;
- }
-
- .container {
- max-width: 1280px;
- margin: 0 auto;
- padding: 0 24px;
- }
-
- /* ---------- Typography ---------- */
- .badge {
- display: inline-flex;
- align-items: center;
- gap: 8px;
- font-weight: 600;
- font-size: 0.75rem;
- letter-spacing: 1px;
- text-transform: uppercase;
- color: var(--rwa-red);
- background: rgba(227, 30, 36, 0.08);
- padding: 6px 18px;
- border-radius: var(--radius-full);
- border: 1px solid rgba(227, 30, 36, 0.10);
- margin-bottom: 16px;
- width: fit-content;
- }
-
- .heading-xl {
- font-family: var(--font-heading);
- font-weight: 900;
- font-size: clamp(2.8rem, 5vw, 4.2rem);
- line-height: 1.05;
- letter-spacing: -2px;
- }
- .heading-xl .highlight {
- color: var(--rwa-red);
- position: relative;
- }
-
- .heading-lg {
- font-family: var(--font-heading);
- font-weight: 800;
- font-size: clamp(2rem, 3vw, 2.8rem);
- line-height: 1.15;
- letter-spacing: -1px;
- }
- .heading-lg .highlight {
- color: var(--rwa-red);
- }
-
- .text-body {
- font-size: 1.15rem;
- color: var(--rwa-grey-dark);
- line-height: 1.7;
- max-width: 560px;
- }
-
- .text-center {
- text-align: center;
- }
- .mx-auto {
- margin-left: auto;
- margin-right: auto;
- }
-
- /* ---------- Buttons ---------- */
- .btn {
- display: inline-flex;
- align-items: center;
- justify-content: center;
- gap: 10px;
- padding: 16px 34px;
- border-radius: var(--radius-sm);
- font-weight: 600;
- font-size: 1rem;
- font-family: var(--font-body);
- border: 2px solid transparent;
- transition: all var(--transition);
- cursor: pointer;
- position: relative;
- overflow: hidden;
- }
- .btn::after {
- content: '';
- position: absolute;
- inset: 0;
- background: rgba(255, 255, 255, 0.08);
- transform: translateX(-100%);
- transition: transform var(--transition);
- }
- .btn:hover::after {
- transform: translateX(0);
- }
-
- .btn-primary {
- background: var(--rwa-red);
- color: var(--rwa-white);
- border-color: var(--rwa-red);
- box-shadow: 0 8px 30px rgba(227, 30, 36, 0.30);
- }
- .btn-primary:hover {
- background: var(--rwa-red-dark);
- border-color: var(--rwa-red-dark);
- transform: translateY(-3px) scale(1.02);
- box-shadow: 0 16px 48px rgba(227, 30, 36, 0.40);
- }
-
- .btn-secondary {
- background: var(--rwa-white);
- color: var(--rwa-black);
- border-color: #D1D5DB;
- }
- .btn-secondary:hover {
- border-color: var(--rwa-black);
- transform: translateY(-3px);
- box-shadow: var(--shadow-sm);
- }
-
- .btn-success {
- background: #10B981;
- color: var(--rwa-white);
- border-color: #10B981;
- }
- .btn-success:hover {
- background: #059669;
- border-color: #059669;
- transform: translateY(-3px);
- }
-
- .btn-outline-light {
- background: transparent;
- color: var(--rwa-white);
- border-color: rgba(255, 255, 255, 0.25);
- }
- .btn-outline-light:hover {
- background: rgba(255, 255, 255, 0.08);
- border-color: var(--rwa-white);
- transform: translateY(-3px);
- }
-
- .btn-sm {
- padding: 10px 22px;
- font-size: 0.9rem;
- }
-
- /* ================================================================
- NAVBAR
- ================================================================ */
- .navbar {
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- z-index: 1000;
- padding: 18px 24px;
- transition: all var(--transition);
- background: transparent;
- }
- .navbar.scrolled {
- background: rgba(255, 255, 255, 0.92);
- backdrop-filter: blur(20px) saturate(180%);
- box-shadow: 0 1px 40px rgba(0, 0, 0, 0.06);
- padding: 12px 24px;
- }
- .nav-container {
- max-width: 1280px;
- margin: 0 auto;
- display: flex;
- align-items: center;
- justify-content: space-between;
- }
- .nav-logo img {
- height: 44px;
- width: auto;
- }
- .nav-menu {
- display: flex;
- align-items: center;
- gap: 36px;
- list-style: none;
- font-weight: 500;
- font-size: 0.95rem;
- }
- .nav-menu a {
- color: var(--rwa-black);
- transition: color 0.2s;
- position: relative;
- }
- .nav-menu a:hover {
- color: var(--rwa-red);
- }
- .nav-menu a::after {
- content: '';
- position: absolute;
- bottom: -6px;
- left: 0;
- width: 0;
- height: 2.5px;
- background: var(--rwa-red);
- transition: width var(--transition);
- border-radius: 10px;
- }
- .nav-menu a:hover::after {
- width: 100%;
- }
- .nav-cta {
- background: var(--rwa-red);
- color: var(--rwa-white) !important;
- padding: 10px 24px;
- border-radius: var(--radius-sm);
- font-weight: 600;
- transition: all var(--transition);
- }
- .nav-cta:hover {
- background: var(--rwa-red-dark) !important;
- transform: translateY(-2px);
- box-shadow: 0 8px 24px rgba(227, 30, 36, 0.30);
- }
- .nav-cta::after {
- display: none !important;
- }
-
- .nav-toggle {
- display: none;
- background: none;
- border: none;
- font-size: 1.8rem;
- color: var(--rwa-black);
- cursor: pointer;
- padding: 4px;
- }
-
- /* ================================================================
- DEMO TEST HERO
- ================================================================ */
- .demo-hero {
- padding: 140px 24px 60px;
- background: var(--rwa-off-white);
- text-align: center;
- position: relative;
- overflow: hidden;
- }
- .demo-hero .orb {
- position: absolute;
- border-radius: 50%;
- filter: blur(120px);
- opacity: 0.10;
- pointer-events: none;
- }
- .demo-hero .orb-1 {
- width: 400px;
- height: 400px;
- background: var(--rwa-red);
- top: -150px;
- right: -100px;
- }
- .demo-hero .orb-2 {
- width: 300px;
- height: 300px;
- background: var(--rwa-black);
- bottom: -100px;
- left: -50px;
- opacity: 0.05;
- }
-
- .demo-hero .badge {
- margin: 0 auto 16px;
- }
- .demo-hero .text-body {
- margin: 12px auto 0;
- }
-
- /* ================================================================
- TEST CONTAINER
- ================================================================ */
- .test-container {
- max-width: 820px;
- margin: -20px auto 80px;
- padding: 0 24px;
- position: relative;
- z-index: 1;
- }
-
- .test-card {
- background: var(--rwa-white);
- border-radius: var(--radius-lg);
- box-shadow: var(--shadow-lg);
- padding: 40px;
- transition: all var(--transition);
- border: 1px solid rgba(0, 0, 0, 0.04);
- }
-
- /* ---------- Test Header ---------- */
- .test-header {
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-wrap: wrap;
- gap: 16px;
- margin-bottom: 28px;
- padding-bottom: 20px;
- border-bottom: 2px solid var(--rwa-grey);
- }
-
- .test-progress-text {
- font-weight: 600;
- font-size: 1rem;
- color: var(--rwa-black);
- }
- .test-progress-text span {
- color: var(--rwa-red);
- }
-
- .test-timer {
- display: flex;
- align-items: center;
- gap: 8px;
- font-weight: 700;
- font-size: 1.1rem;
- color: var(--rwa-black);
- background: var(--rwa-grey);
- padding: 6px 18px;
- border-radius: var(--radius-full);
- }
- .test-timer i {
- color: var(--rwa-red);
- width: 20px;
- height: 20px;
- }
- .test-timer.warning {
- color: #EF4444;
- }
- .test-timer.warning i {
- color: #EF4444;
- }
-
- /* ---------- Progress Bar ---------- */
- .progress-bar-track {
- width: 100%;
- height: 6px;
- background: var(--rwa-grey);
- border-radius: 10px;
- overflow: hidden;
- margin-bottom: 28px;
- }
- .progress-bar-fill {
- height: 100%;
- background: var(--rwa-red);
- border-radius: 10px;
- transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
- width: 0%;
- }
-
- /* ---------- Question ---------- */
- .question-number {
- font-size: 0.85rem;
- font-weight: 600;
- color: var(--rwa-grey-medium);
- text-transform: uppercase;
- letter-spacing: 0.5px;
- margin-bottom: 8px;
- }
-
- .question-text {
- font-family: var(--font-heading);
- font-weight: 700;
- font-size: 1.4rem;
- line-height: 1.4;
- margin-bottom: 28px;
- }
-
- /* ---------- Options ---------- */
- .options-grid {
- display: flex;
- flex-direction: column;
- gap: 12px;
- margin-bottom: 32px;
- }
-
- .option-btn {
- display: flex;
- align-items: center;
- gap: 16px;
- padding: 16px 20px;
- border-radius: var(--radius-sm);
- border: 2px solid var(--rwa-grey);
- background: var(--rwa-white);
- cursor: pointer;
- transition: all 0.2s;
- font-family: var(--font-body);
- font-weight: 500;
- font-size: 1rem;
- text-align: left;
- width: 100%;
- position: relative;
- }
- .option-btn:hover:not(.disabled) {
- border-color: var(--rwa-grey-medium);
- background: var(--rwa-off-white);
- transform: translateX(4px);
- }
- .option-btn .letter {
- display: flex;
- align-items: center;
- justify-content: center;
- width: 32px;
- height: 32px;
- border-radius: 50%;
- background: var(--rwa-grey);
- color: var(--rwa-grey-dark);
- font-weight: 700;
- font-size: 0.85rem;
- flex-shrink: 0;
- transition: all 0.2s;
- }
- .option-btn .option-text {
- flex: 1;
- }
- .option-btn .result-icon {
- margin-left: auto;
- width: 24px;
- height: 24px;
- opacity: 0;
- transition: opacity 0.3s;
- }
-
- .option-btn.correct {
- border-color: #10B981;
- background: #ECFDF5;
- }
- .option-btn.correct .letter {
- background: #10B981;
- color: var(--rwa-white);
- }
- .option-btn.correct .result-icon {
- opacity: 1;
- color: #10B981;
- }
-
- .option-btn.wrong {
- border-color: #EF4444;
- background: #FEF2F2;
- }
- .option-btn.wrong .letter {
- background: #EF4444;
- color: var(--rwa-white);
- }
- .option-btn.wrong .result-icon {
- opacity: 1;
- color: #EF4444;
- }
-
- .option-btn.disabled {
- cursor: default;
- pointer-events: none;
- }
-
- .option-btn .explanation {
- display: none;
- margin-top: 8px;
- padding: 12px 16px;
- background: var(--rwa-off-white);
- border-radius: var(--radius-sm);
- font-weight: 400;
- font-size: 0.9rem;
- color: var(--rwa-grey-dark);
- width: 100%;
- border-left: 3px solid var(--rwa-red);
- }
- .option-btn .explanation.show {
- display: block;
- }
-
- /* ---------- Test Footer ---------- */
- .test-footer {
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-wrap: wrap;
- gap: 16px;
- padding-top: 20px;
- border-top: 2px solid var(--rwa-grey);
- }
-
- .test-footer .btn {
- min-width: 120px;
- }
-
- .test-footer .question-counter {
- font-size: 0.9rem;
- color: var(--rwa-grey-medium);
- font-weight: 500;
- }
-
- /* ================================================================
- RESULTS
- ================================================================ */
- .results-container {
- display: none;
- animation: fadeUp 0.6s ease;
- }
- .results-container.active {
- display: block;
- }
-
- @keyframes fadeUp {
- from {
- opacity: 0;
- transform: translateY(30px);
- }
- to {
- opacity: 1;
- transform: translateY(0);
- }
- }
-
- .results-score {
- text-align: center;
- padding: 32px 0;
- }
- .results-score .score-circle {
- width: 160px;
- height: 160px;
- border-radius: 50%;
- display: inline-flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- background: var(--rwa-off-white);
- border: 6px solid var(--rwa-red);
- margin-bottom: 20px;
- }
- .results-score .score-number {
- font-family: var(--font-heading);
- font-weight: 900;
- font-size: 4rem;
- line-height: 1;
- color: var(--rwa-black);
- }
- .results-score .score-label {
- font-size: 0.9rem;
- color: var(--rwa-grey-medium);
- font-weight: 500;
- }
- .results-score .score-message {
- font-family: var(--font-heading);
- font-weight: 700;
- font-size: 1.6rem;
- margin-top: 8px;
- }
- .results-score .score-submessage {
- color: var(--rwa-grey-dark);
- font-size: 1.05rem;
- margin-top: 4px;
- }
-
- .results-breakdown {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
- gap: 16px;
- margin: 32px 0;
- padding: 24px;
- background: var(--rwa-off-white);
- border-radius: var(--radius-md);
- }
- .results-breakdown .stat-item {
- text-align: center;
- }
- .results-breakdown .stat-item .stat-value {
- font-family: var(--font-heading);
- font-weight: 800;
- font-size: 1.8rem;
- color: var(--rwa-black);
- }
- .results-breakdown .stat-item .stat-label {
- font-size: 0.8rem;
- color: var(--rwa-grey-medium);
- font-weight: 500;
- text-transform: uppercase;
- letter-spacing: 0.5px;
- }
-
- .results-actions {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: 16px;
- margin-top: 32px;
- padding-top: 32px;
- border-top: 2px solid var(--rwa-grey);
- }
-
- /* ================================================================
- LOADING STATE
- ================================================================ */
- .loading-state {
- text-align: center;
- padding: 60px 20px;
- }
- .loading-state .spinner {
- display: inline-block;
- width: 48px;
- height: 48px;
- border: 4px solid var(--rwa-grey);
- border-top: 4px solid var(--rwa-red);
- border-radius: 50%;
- animation: spin 0.8s linear infinite;
- }
- @keyframes spin {
- to {
- transform: rotate(360deg);
- }
- }
- .loading-state p {
- margin-top: 16px;
- color: var(--rwa-grey-medium);
- }
-
- /* ================================================================
- FOOTER
- ================================================================ */
- .footer {
- background: var(--rwa-black-light);
- color: rgba(255, 255, 255, 0.7);
- padding: 64px 24px 24px;
- border-top: 1px solid rgba(255, 255, 255, 0.04);
- margin-top: 40px;
- }
- .footer-grid {
- max-width: 1280px;
- margin: 0 auto;
- display: grid;
- grid-template-columns: 2fr 1fr 1fr 1.5fr;
- gap: 48px;
- padding-bottom: 48px;
- border-bottom: 1px solid rgba(255, 255, 255, 0.06);
- }
- .footer-brand .logo {
- height: 40px;
- width: auto;
- margin-bottom: 14px;
- }
- .footer-brand p {
- font-size: 0.95rem;
- line-height: 1.6;
- max-width: 300px;
- margin-bottom: 16px;
- }
- .footer-brand .mini-stats {
- display: flex;
- gap: 24px;
- flex-wrap: wrap;
- }
- .footer-brand .mini-stats span {
- display: flex;
- align-items: center;
- gap: 8px;
- font-size: 0.85rem;
- color: rgba(255, 255, 255, 0.5);
- }
- .footer-brand .mini-stats i {
- color: var(--rwa-red);
- width: 16px;
- height: 16px;
- }
-
- .footer-col h4 {
- color: var(--rwa-white);
- font-weight: 700;
- font-size: 1rem;
- margin-bottom: 16px;
- }
- .footer-col ul {
- list-style: none;
- }
- .footer-col ul li {
- margin-bottom: 10px;
- }
- .footer-col ul a {
- color: rgba(255, 255, 255, 0.6);
- transition: color 0.2s;
- font-size: 0.95rem;
- }
- .footer-col ul a:hover {
- color: var(--rwa-white);
- }
-
- .footer-contact li {
- display: flex;
- align-items: center;
- gap: 12px;
- margin-bottom: 12px;
- font-size: 0.95rem;
- color: rgba(255, 255, 255, 0.6);
- }
- .footer-contact i {
- color: var(--rwa-red);
- width: 18px;
- height: 18px;
- flex-shrink: 0;
- }
- .footer-contact a {
- color: rgba(255, 255, 255, 0.6);
- transition: color 0.2s;
- }
- .footer-contact a:hover {
- color: var(--rwa-white);
- }
-
- .footer-socials {
- display: flex;
- flex-direction: column;
- gap: 10px;
- }
- .footer-socials .social-link {
- display: flex;
- align-items: center;
- gap: 12px;
- padding: 10px 16px;
- border-radius: var(--radius-sm);
- background: rgba(255, 255, 255, 0.03);
- border: 1px solid rgba(255, 255, 255, 0.05);
- color: rgba(255, 255, 255, 0.8);
- transition: all var(--transition);
- font-size: 0.95rem;
- }
- .footer-socials .social-link:hover {
- background: rgba(255, 255, 255, 0.06);
- transform: translateX(6px);
- }
- .footer-socials .social-link i {
- width: 20px;
- height: 20px;
- }
- .footer-socials .social-link .fb-icon {
- color: #1877F2;
- }
- .footer-socials .social-link .wa-icon {
- color: #25D366;
- }
- .footer-socials .social-link .comm-icon {
- color: #00E676;
- }
- .footer-socials .social-link .ig-icon {
- color: #E4405F;
- }
- .footer-socials .social-link .follower-badge {
- margin-left: auto;
- background: var(--rwa-red);
- color: var(--rwa-white);
- padding: 2px 14px;
- border-radius: var(--radius-full);
- font-size: 0.7rem;
- font-weight: 700;
- }
-
- .footer-bottom {
- max-width: 1280px;
- margin: 0 auto;
- padding-top: 24px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-wrap: wrap;
- gap: 16px;
- font-size: 0.85rem;
- color: rgba(255, 255, 255, 0.3);
- }
- .footer-bottom-links {
- display: flex;
- gap: 28px;
- }
- .footer-bottom-links a {
- color: rgba(255, 255, 255, 0.3);
- transition: color 0.2s;
- }
- .footer-bottom-links a:hover {
- color: rgba(255, 255, 255, 0.6);
- }
-
- /* ================================================================
- RESPONSIVE
- ================================================================ */
- @media (max-width: 1024px) {
- .footer-grid {
- grid-template-columns: 1fr 1fr;
- gap: 32px;
- }
- }
-
- @media (max-width: 768px) {
- .nav-menu {
- display: none;
- flex-direction: column;
- background: var(--rwa-white);
- position: absolute;
- top: 72px;
- left: 16px;
- right: 16px;
- padding: 28px;
- border-radius: var(--radius-md);
- box-shadow: var(--shadow-lg);
- gap: 18px;
- border: 1px solid var(--rwa-grey);
- }
- .nav-menu.active {
- display: flex;
- }
- .nav-toggle {
- display: block;
- }
-
- .test-card {
- padding: 24px;
- }
-
- .question-text {
- font-size: 1.15rem;
- }
-
- .option-btn {
- padding: 14px 16px;
- font-size: 0.95rem;
- }
-
- .test-footer {
- flex-direction: column;
- align-items: stretch;
- }
- .test-footer .btn {
- width: 100%;
- justify-content: center;
- }
-
- .results-breakdown {
- grid-template-columns: 1fr 1fr;
- }
-
- .results-score .score-circle {
- width: 120px;
- height: 120px;
- }
- .results-score .score-number {
- font-size: 3rem;
- }
-
- .footer-grid {
- grid-template-columns: 1fr;
- text-align: center;
- }
- .footer-brand p {
- max-width: 100%;
- }
- .footer-brand .mini-stats {
- justify-content: center;
- }
- .footer-contact li {
- justify-content: center;
- }
- .footer-socials .social-link {
- justify-content: center;
- }
- .footer-socials .social-link .follower-badge {
- margin-left: 0;
- }
- .footer-bottom {
- flex-direction: column;
- text-align: center;
- }
- .footer-bottom-links {
- justify-content: center;
- }
- }
-
- @media (max-width: 480px) {
- .test-header {
- flex-direction: column;
- align-items: stretch;
- gap: 12px;
- }
- .test-timer {
- align-self: flex-start;
- }
- .results-breakdown {
- grid-template-columns: 1fr;
- }
- .results-actions .btn {
- width: 100%;
- justify-content: center;
- }
- .btn {
- padding: 14px 24px;
- font-size: 0.95rem;
- }
- }
-
- /* ================================================================
- UTILITY ANIMATIONS
- ================================================================ */
- .fade-in {
- animation: fadeUp 0.5s ease;
- }
-
- .pulse-ring {
- animation: pulseRing 2s infinite;
- }
-
- @keyframes pulseRing {
- 0% {
- box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.3);
- }
- 70% {
- box-shadow: 0 0 0 20px rgba(227, 30, 36, 0);
- }
- 100% {
- box-shadow: 0 0 0 0 rgba(227, 30, 36, 0);
- }
- }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Demo Test – Road Wise Academy</title>
+    <meta name="description" content="Try our free Botswana driving theory demo test. Experience realistic questions, instant feedback, and see how Road Wise Academy prepares you to pass.">
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Demo Test – Road Wise Academy">
+    <meta property="og:description" content="Experience our interactive driving theory demo test. 10 challenging questions with instant feedback.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roadwiseacademy.co.bw/demo-test.html">
+    <meta property="og:image" content="https://roadwiseacademy.co.bw/assets/images/logo/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <style>
+        /* ================================================================
+               ROAD WISE ACADEMY — DEMO TEST STYLES
+               ================================================================ */
+
+        /* ---------- Reset & Variables ---------- */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rwa-red: #E31E24;
+            --rwa-red-dark: #B8181D;
+            --rwa-red-glow: rgba(227, 30, 36, 0.15);
+            --rwa-black: #0A0A0A;
+            --rwa-black-light: #1A1A1A;
+            --rwa-white: #FFFFFF;
+            --rwa-off-white: #F8F9FC;
+            --rwa-grey: #EEF2F6;
+            --rwa-grey-medium: #8A8F98;
+            --rwa-grey-dark: #4A4D55;
+
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.10);
+            --shadow-glow: 0 30px 80px rgba(227, 30, 36, 0.18);
+
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+            --radius-full: 9999px;
+
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Poppins', 'Inter', sans-serif;
+
+            --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--rwa-off-white);
+            color: var(--rwa-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---------- Typography ---------- */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--rwa-red);
+            background: rgba(227, 30, 36, 0.08);
+            padding: 6px 18px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(227, 30, 36, 0.10);
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+        .badge-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .heading-xl {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+        .heading-xl .highlight {
+            color: var(--rwa-red);
+            position: relative;
+        }
+
+        .heading-lg {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+        .heading-lg .highlight {
+            color: var(--rwa-red);
+        }
+
+        .text-body {
+            font-size: 1.15rem;
+            color: var(--rwa-grey-dark);
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 34px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            border: 2px solid transparent;
+            transition: all var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+        }
+        .btn:hover::after {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--rwa-red);
+            color: var(--rwa-white);
+            border-color: var(--rwa-red);
+            box-shadow: 0 8px 30px rgba(227, 30, 36, 0.30);
+        }
+        .btn-primary:hover {
+            background: var(--rwa-red-dark);
+            border-color: var(--rwa-red-dark);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(227, 30, 36, 0.40);
+        }
+
+        .btn-secondary {
+            background: var(--rwa-white);
+            color: var(--rwa-black);
+            border-color: #D1D5DB;
+        }
+        .btn-secondary:hover {
+            border-color: var(--rwa-black);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-success {
+            background: #10B981;
+            color: var(--rwa-white);
+            border-color: #10B981;
+        }
+        .btn-success:hover {
+            background: #059669;
+            border-color: #059669;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            color: var(--rwa-white);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--rwa-white);
+            transform: translateY(-3px);
+        }
+
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 0.9rem;
+        }
+
+        /* ================================================================
+               NAVBAR
+               ================================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 24px;
+            transition: all var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: 0 1px 40px rgba(0, 0, 0, 0.06);
+            padding: 12px 24px;
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo img {
+            height: 44px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .nav-menu a {
+            color: var(--rwa-black);
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-menu a:hover {
+            color: var(--rwa-red);
+        }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--rwa-red);
+            transition: width var(--transition);
+            border-radius: 10px;
+        }
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--rwa-red);
+            color: var(--rwa-white) !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            transition: all var(--transition);
+        }
+        .nav-cta:hover {
+            background: var(--rwa-red-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(227, 30, 36, 0.30);
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--rwa-black);
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* ================================================================
+               DEMO TEST HERO
+               ================================================================ */
+        .demo-hero {
+            padding: 140px 24px 60px;
+            background: var(--rwa-off-white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .demo-hero .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.10;
+            pointer-events: none;
+        }
+        .demo-hero .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--rwa-red);
+            top: -150px;
+            right: -100px;
+        }
+        .demo-hero .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--rwa-black);
+            bottom: -100px;
+            left: -50px;
+            opacity: 0.05;
+        }
+
+        .demo-hero .badge {
+            margin: 0 auto 16px;
+        }
+        .demo-hero .text-body {
+            margin: 12px auto 0;
+        }
+
+        /* ================================================================
+               TEST CONTAINER
+               ================================================================ */
+        .test-container {
+            max-width: 820px;
+            margin: -20px auto 80px;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .test-card {
+            background: var(--rwa-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            transition: all var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        /* ---------- Test Header ---------- */
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--rwa-grey);
+        }
+
+        .test-progress-text {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--rwa-black);
+        }
+        .test-progress-text span {
+            color: var(--rwa-red);
+        }
+
+        .test-timer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--rwa-black);
+            background: var(--rwa-grey);
+            padding: 6px 18px;
+            border-radius: var(--radius-full);
+        }
+        .test-timer i {
+            color: var(--rwa-red);
+            width: 20px;
+            height: 20px;
+        }
+        .test-timer.warning {
+            color: #EF4444;
+        }
+        .test-timer.warning i {
+            color: #EF4444;
+        }
+
+        /* ---------- Progress Bar ---------- */
+        .progress-bar-track {
+            width: 100%;
+            height: 6px;
+            background: var(--rwa-grey);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--rwa-red);
+            border-radius: 10px;
+            transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 0%;
+        }
+
+        /* ---------- Question ---------- */
+        .question-number {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--rwa-grey-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .question-text {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin-bottom: 28px;
+        }
+
+        /* ---------- Options ---------- */
+        .options-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .option-btn {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--rwa-grey);
+            background: var(--rwa-white);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1rem;
+            text-align: left;
+            width: 100%;
+            position: relative;
+        }
+        .option-btn:hover:not(.disabled) {
+            border-color: var(--rwa-grey-medium);
+            background: var(--rwa-off-white);
+            transform: translateX(4px);
+        }
+        .option-btn .letter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--rwa-grey);
+            color: var(--rwa-grey-dark);
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+        .option-btn .option-text {
+            flex: 1;
+        }
+        .option-btn .result-icon {
+            margin-left: auto;
+            width: 24px;
+            height: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .option-btn.correct {
+            border-color: #10B981;
+            background: #ECFDF5;
+        }
+        .option-btn.correct .letter {
+            background: #10B981;
+            color: var(--rwa-white);
+        }
+        .option-btn.correct .result-icon {
+            opacity: 1;
+            color: #10B981;
+        }
+
+        .option-btn.wrong {
+            border-color: #EF4444;
+            background: #FEF2F2;
+        }
+        .option-btn.wrong .letter {
+            background: #EF4444;
+            color: var(--rwa-white);
+        }
+        .option-btn.wrong .result-icon {
+            opacity: 1;
+            color: #EF4444;
+        }
+
+        .option-btn.disabled {
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .option-btn .explanation {
+            display: none;
+            margin-top: 8px;
+            padding: 12px 16px;
+            background: var(--rwa-off-white);
+            border-radius: var(--radius-sm);
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--rwa-grey-dark);
+            width: 100%;
+            border-left: 3px solid var(--rwa-red);
+        }
+        .option-btn .explanation.show {
+            display: block;
+        }
+
+        /* ---------- Test Footer ---------- */
+        .test-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 2px solid var(--rwa-grey);
+        }
+
+        .test-footer .btn {
+            min-width: 120px;
+        }
+
+        .test-footer .question-counter {
+            font-size: 0.9rem;
+            color: var(--rwa-grey-medium);
+            font-weight: 500;
+        }
+
+        /* ================================================================
+               RESULTS
+               ================================================================ */
+        .results-container {
+            display: none;
+            animation: fadeUp 0.6s ease;
+        }
+        .results-container.active {
+            display: block;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results-score {
+            text-align: center;
+            padding: 32px 0;
+        }
+        .results-score .score-circle {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: var(--rwa-off-white);
+            border: 6px solid var(--rwa-red);
+            margin-bottom: 20px;
+        }
+        .results-score .score-number {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--rwa-black);
+        }
+        .results-score .score-label {
+            font-size: 0.9rem;
+            color: var(--rwa-grey-medium);
+            font-weight: 500;
+        }
+        .results-score .score-message {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-top: 8px;
+        }
+        .results-score .score-submessage {
+            color: var(--rwa-grey-dark);
+            font-size: 1.05rem;
+            margin-top: 4px;
+        }
+
+        .results-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin: 32px 0;
+            padding: 24px;
+            background: var(--rwa-off-white);
+            border-radius: var(--radius-md);
+        }
+        .results-breakdown .stat-item {
+            text-align: center;
+        }
+        .results-breakdown .stat-item .stat-value {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--rwa-black);
+        }
+        .results-breakdown .stat-item .stat-label {
+            font-size: 0.8rem;
+            color: var(--rwa-grey-medium);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .results-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 2px solid var(--rwa-grey);
+        }
+
+        /* ================================================================
+               LOADING STATE
+               ================================================================ */
+        .loading-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .loading-state .spinner {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border: 4px solid var(--rwa-grey);
+            border-top: 4px solid var(--rwa-red);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .loading-state p {
+            margin-top: 16px;
+            color: var(--rwa-grey-medium);
+        }
+
+        /* ================================================================
+               FOOTER
+               ================================================================ */
+        .footer {
+            background: var(--rwa-black-light);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 64px 24px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            margin-top: 40px;
+        }
+        .footer-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-brand .logo {
+            height: 40px;
+            width: auto;
+            margin-bottom: 14px;
+        }
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 300px;
+            margin-bottom: 16px;
+        }
+        .footer-brand .mini-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .footer-brand .mini-stats span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer-brand .mini-stats i {
+            color: var(--rwa-red);
+            width: 16px;
+            height: 16px;
+        }
+
+        .footer-col h4 {
+            color: var(--rwa-white);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+        .footer-col ul a:hover {
+            color: var(--rwa-white);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-contact i {
+            color: var(--rwa-red);
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s;
+        }
+        .footer-contact a:hover {
+            color: var(--rwa-white);
+        }
+
+        .footer-socials {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-socials .social-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+            transition: all var(--transition);
+            font-size: 0.95rem;
+        }
+        .footer-socials .social-link:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(6px);
+        }
+        .footer-socials .social-link i {
+            width: 20px;
+            height: 20px;
+        }
+        .footer-socials .social-link .fb-icon {
+            color: #1877F2;
+        }
+        .footer-socials .social-link .wa-icon {
+            color: #25D366;
+        }
+        .footer-socials .social-link .comm-icon {
+            color: #00E676;
+        }
+        .footer-socials .social-link .follower-badge {
+            margin-left: auto;
+            background: var(--rwa-red);
+            color: var(--rwa-white);
+            padding: 2px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .footer-bottom-links {
+            display: flex;
+            gap: 28px;
+        }
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.3);
+            transition: color 0.2s;
+        }
+        .footer-bottom-links a:hover {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ================================================================
+               RESPONSIVE
+               ================================================================ */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                background: var(--rwa-white);
+                position: absolute;
+                top: 72px;
+                left: 16px;
+                right: 16px;
+                padding: 28px;
+                border-radius: var(--radius-md);
+                box-shadow: var(--shadow-lg);
+                gap: 18px;
+                border: 1px solid var(--rwa-grey);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-toggle {
+                display: block;
+            }
+
+            .test-card {
+                padding: 24px;
+            }
+
+            .question-text {
+                font-size: 1.15rem;
+            }
+
+            .option-btn {
+                padding: 14px 16px;
+                font-size: 0.95rem;
+            }
+
+            .test-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .test-footer .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .results-breakdown {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .results-score .score-circle {
+                width: 120px;
+                height: 120px;
+            }
+            .results-score .score-number {
+                font-size: 3rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-brand .mini-stats {
+                justify-content: center;
+            }
+            .footer-contact li {
+                justify-content: center;
+            }
+            .footer-socials .social-link {
+                justify-content: center;
+            }
+            .footer-socials .social-link .follower-badge {
+                margin-left: 0;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .test-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .test-timer {
+                align-self: flex-start;
+            }
+            .results-breakdown {
+                grid-template-columns: 1fr;
+            }
+            .results-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .btn {
+                padding: 14px 24px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ================================================================
+               UTILITY ANIMATIONS
+               ================================================================ */
+        .fade-in {
+            animation: fadeUp 0.5s ease;
+        }
+
+        .pulse-ring {
+            animation: pulseRing 2s infinite;
+        }
+
+        @keyframes pulseRing {
+            0% {
+                box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.3);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(227, 30, 36, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(227, 30, 36, 0);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
- <!-- ================================================================
- NAVBAR
- ================================================================ -->
- <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
- <div class="nav-container">
- <a href="index.html" class="nav-logo" aria-label="Road Wise Academy homepage">
- <img src="assets/images/logo/logo.png" alt="Road Wise Academy">
- </a>
- <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
- <i data-lucide="menu"></i>
- </button>
- <ul class="nav-menu" id="navMenu">
- <li><a href="index.html">Home</a></li>
- <li><a href="about.html">About</a></li>
- <li><a href="demo-test.html" aria-current="page">Demo Test</a></li>
- <li><a href="driving-schools.html">Schools</a></li>
- <li><a href="theory-test-guide.html">Theory Guide</a></li>
- <li><a href="contact.html">Contact</a></li>
- <li><a href="student-zone.html" class="nav-cta">Student Zone</a></li>
- </ul>
- </div>
- </nav>
-
- <!-- ================================================================
- DEMO HERO
- ================================================================ -->
- <section class="demo-hero" aria-labelledby="demo-title">
- <div class="orb orb-1"></div>
- <div class="orb orb-2"></div>
- <div class="container">
- <span class="badge">
- <i data-lucide="zap"></i> Free Interactive Demo
- </span>
- <h1 class="heading-xl" id="demo-title">
- Test Your <span class="highlight">Knowledge</span>
- </h1>
- <p class="text-body mx-auto">
- Experience 10 realistic driving theory questions with instant feedback.
- See how Road Wise Academy prepares you to pass.
- </p>
- </div>
- </section>
-
- <!-- ================================================================
- TEST CONTAINER
- ================================================================ -->
- <div class="test-container" id="testContainer">
-
- <!-- Loading State -->
- <div class="loading-state" id="loadingState">
- <div class="spinner"></div>
- <p>Loading your demo test...</p>
- </div>
-
- <!-- Test Card -->
- <div class="test-card" id="testCard" style="display:none;">
- <!-- Header -->
- <div class="test-header">
- <div class="test-progress-text">
- Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">10</span>
- </div>
- <div class="test-timer" id="timerDisplay">
- <i data-lucide="clock"></i>
- <span id="timerText">10:00</span>
- </div>
- </div>
-
- <!-- Progress Bar -->
- <div class="progress-bar-track">
- <div class="progress-bar-fill" id="progressFill"></div>
- </div>
-
- <!-- Question Area -->
- <div id="questionArea">
- <div class="question-number" id="questionCategory">Category</div>
- <div class="question-text" id="questionText">Loading question...</div>
-
- <div class="options-grid" id="optionsGrid">
- <!-- Options rendered by JS -->
- </div>
- </div>
-
- <!-- Footer -->
- <div class="test-footer">
- <span class="question-counter" id="questionCounter">1 of 10</span>
- <div style="display:flex;gap:12px;flex-wrap:wrap;">
- <button class="btn btn-secondary btn-sm" id="prevBtn" disabled>
- <i data-lucide="chevron-left"></i> Previous
- </button>
- <button class="btn btn-primary btn-sm" id="nextBtn">
- Next <i data-lucide="chevron-right"></i>
- </button>
- </div>
- </div>
- </div>
-
- <!-- Results -->
- <div class="test-card results-container" id="resultsContainer">
- <div class="results-score">
- <div class="score-circle">
- <span class="score-number" id="finalScore">0</span>
- <span class="score-label">/ 10</span>
- </div>
- <div class="score-message" id="scoreMessage">Great Job!</div>
- <div class="score-submessage" id="scoreSubmessage">You're on the right track.</div>
- </div>
-
- <div class="results-breakdown">
- <div class="stat-item">
- <div class="stat-value" id="correctCount">0</div>
- <div class="stat-label">Correct</div>
- </div>
- <div class="stat-item">
- <div class="stat-value" id="wrongCount">0</div>
- <div class="stat-label">Wrong</div>
- </div>
- <div class="stat-item">
- <div class="stat-value" id="accuracyPercent">0%</div>
- <div class="stat-label">Accuracy</div>
- </div>
- <div class="stat-item">
- <div class="stat-value" id="timeTaken">0:00</div>
- <div class="stat-label">Time Taken</div>
- </div>
- </div>
-
- <div class="results-actions">
- <button class="btn btn-secondary" id="retryBtn">
- <i data-lucide="refresh-ccw"></i> Retry Demo
- </button>
- <a href="student-zone.html" class="btn btn-primary pulse-ring">
- <i data-lucide="log-in"></i> Access Full Student Zone
- </a>
- <a href="index.html" class="btn btn-secondary">
- <i data-lucide="home"></i> Back to Home
- </a>
- </div>
- </div>
- </div>
-
- <!-- ================================================================
- FOOTER
- ================================================================ -->
- <footer class="footer" role="contentinfo">
- <div class="footer-grid">
- <div class="footer-brand">
- <img src="assets/images/logo/logo.png" alt="Road Wise Academy" class="logo">
- <p>Botswana's digital driving theory education platform. Study smart. Pass with confidence.</p>
- <div class="mini-stats">
- <span><i data-lucide="users"></i> 5K+ Followers</span>
- <span><i data-lucide="school"></i> 5 Partner Schools</span>
- </div>
- </div>
-
- <div class="footer-col">
- <h4>Quick Links</h4>
- <ul>
- <li><a href="about.html">About Us</a></li>
- <li><a href="demo-test.html">Demo Test</a></li>
- <li><a href="driving-schools.html">Driving Schools</a></li>
- <li><a href="theory-test-guide.html">Theory Test Guide</a></li>
- </ul>
- </div>
-
- <div class="footer-col">
- <h4>Get in Touch</h4>
- <ul class="footer-contact">
- <li><i data-lucide="phone"></i> <a href="tel:+26775911795">+267 75 911 795</a></li>
- <li><i data-lucide="mail"></i> <a href="mailto:info@roadwiseacademy.co.bw">info@roadwiseacademy.co.bw</a></li>
- <li><i data-lucide="map-pin"></i> Gaborone, Botswana</li>
- </ul>
- </div>
-
- <div class="footer-col">
- <h4>Join Our Community</h4>
- <div class="footer-socials">
- <a href="https://www.facebook.com/profile.php?id=61563870249694" target="_blank" rel="noopener" class="social-link">
- <i data-lucide="facebook" class="fb-icon"></i> Facebook
- <span class="follower-badge">5K+</span>
- </a>
- <a href="https://wa.me/26775911795" target="_blank" rel="noopener" class="social-link">
- <i data-lucide="phone" class="wa-icon"></i> WhatsApp
- </a>
- <a href="#" class="social-link">
- <i data-lucide="users" class="comm-icon"></i> WhatsApp Community
- </a>
- <a href="#" class="social-link">
- </a>
- </div>
- </div>
- </div>
-
- <div class="footer-bottom">
- <p>&copy; 2026 Road Wise Academy. All rights reserved.</p>
- <div class="footer-bottom-links">
- <a href="#">Privacy Policy</a>
- <a href="#">Terms &amp; Conditions</a>
- </div>
- </div>
- </footer>
-
- <!-- ================================================================
- JAVASCRIPT €” PRODUCTION QUALITY
- ================================================================ -->
- <script>
- (function() {
- 'use strict';
-
- // ============================================================
- // 1. LUCIDE ICONS
- // ============================================================
- if (typeof lucide !== 'undefined') {
- lucide.createIcons();
- }
-
- // ============================================================
- // 2. NAVBAR
- // ============================================================
- const navbar = document.getElementById('navbar');
- window.addEventListener('scroll', function() {
- const scrollY = window.pageYOffset || document.documentElement.scrollTop;
- navbar.classList.toggle('scrolled', scrollY > 50);
- }, { passive: true });
-
- // ============================================================
- // 3. MOBILE NAV
- // ============================================================
- const toggle = document.getElementById('navToggle');
- const menu = document.getElementById('navMenu');
-
- if (toggle && menu) {
- const toggleMenu = function() {
- const isOpen = menu.classList.toggle('active');
- const icon = toggle.querySelector('i');
- if (icon) {
- icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
- if (typeof lucide !== 'undefined') lucide.createIcons();
- }
- toggle.setAttribute('aria-expanded', isOpen);
- };
-
- toggle.addEventListener('click', toggleMenu);
-
- menu.querySelectorAll('a').forEach(function(link) {
- link.addEventListener('click', function() {
- menu.classList.remove('active');
- const icon = toggle.querySelector('i');
- if (icon) {
- icon.setAttribute('data-lucide', 'menu');
- if (typeof lucide !== 'undefined') lucide.createIcons();
- }
- toggle.setAttribute('aria-expanded', 'false');
- });
- });
- }
-
- // ============================================================
- // 4. DEMO TEST ENGINE
- // ============================================================
-
- // ----- State -----
- const state = {
- questions: [],
- currentIndex: 0,
- answers: [], // 'correct' | 'wrong' | null
- selectedOption: null,
- isAnswered: false,
- timer: 600, // 10 minutes in seconds
- timerInterval: null,
- isFinished: false,
- startTime: null,
- };
-
- // ----- DOM Refs -----
- const loadingState = document.getElementById('loadingState');
- const testCard = document.getElementById('testCard');
- const resultsContainer = document.getElementById('resultsContainer');
-
- const currentQuestionNum = document.getElementById('currentQuestionNum');
- const totalQuestions = document.getElementById('totalQuestions');
- const timerText = document.getElementById('timerText');
- const timerDisplay = document.getElementById('timerDisplay');
- const progressFill = document.getElementById('progressFill');
-
- const questionCategory = document.getElementById('questionCategory');
- const questionText = document.getElementById('questionText');
- const optionsGrid = document.getElementById('optionsGrid');
-
- const prevBtn = document.getElementById('prevBtn');
- const nextBtn = document.getElementById('nextBtn');
- const questionCounter = document.getElementById('questionCounter');
-
- const finalScore = document.getElementById('finalScore');
- const scoreMessage = document.getElementById('scoreMessage');
- const scoreSubmessage = document.getElementById('scoreSubmessage');
- const correctCount = document.getElementById('correctCount');
- const wrongCount = document.getElementById('wrongCount');
- const accuracyPercent = document.getElementById('accuracyPercent');
- const timeTaken = document.getElementById('timeTaken');
-
- const retryBtn = document.getElementById('retryBtn');
-
- // ----- Load Questions -----
- async function loadQuestions() {
- try {
- const response = await fetch('data/demo-questions.json');
- if (!response.ok) throw new Error('Failed to load questions');
- const data = await response.json();
- state.questions = data;
- state.answers = new Array(data.length).fill(null);
- totalQuestions.textContent = data.length;
- initTest();
- } catch (error) {
- console.error('Error loading questions:', error);
- // Fallback: use hardcoded questions if JSON fails
- state.questions = getFallbackQuestions();
- state.answers = new Array(state.questions.length).fill(null);
- totalQuestions.textContent = state.questions.length;
- initTest();
- }
- }
-
- // ----- Fallback Questions (if JSON fails) -----
- function getFallbackQuestions() {
- return [{
- id: 1,
- category: 'Road Signs',
- question: 'What does a red circle with a white horizontal bar inside mean?',
- options: [
- 'No entry',
- 'Speed limit',
- 'No parking',
- 'One-way street'
- ],
- correct: 0,
- explanation: 'A red circle with a white bar indicates "No Entry". You must not enter this road.'
- }, {
- id: 2,
- category: 'Rules of the Road',
- question: 'When two vehicles approach an intersection from different roads at the same time, who has right of way?',
- options: [
- 'The vehicle on the right',
- 'The vehicle on the left',
- 'The faster vehicle',
- 'The larger vehicle'
- ],
- correct: 0,
- explanation: 'In Botswana, the vehicle on the right has right of way at an uncontrolled intersection.'
- }, {
- id: 3,
- category: 'Safety',
- question: 'What is the minimum following distance you should maintain in wet conditions?',
- options: [
- '2 seconds',
- '4 seconds',
- '6 seconds',
- '8 seconds'
- ],
- correct: 1,
- explanation: 'In wet conditions, you should maintain at least a 4-second following distance to allow for longer stopping distances.'
- }, {
- id: 4,
- category: 'Licencing',
- question: 'If you accumulate 12 demerit points on your licence, what happens?',
- options: [
- 'Nothing, you\'re fine',
- 'You receive a warning',
- 'Your licence is suspended',
- 'You must retake the test'
- ],
- correct: 2,
- explanation: 'In Botswana, accumulating 12 or more demerit points results in licence suspension.'
- }, {
- id: 5,
- category: 'Road Signs',
- question: 'What does a yellow diamond-shaped sign with a black arrow indicate?',
- options: [
- 'Bend ahead',
- 'Sharp curve',
- 'Two-way traffic',
- 'Merging traffic'
- ],
- correct: 0,
- explanation: 'A yellow diamond with a black arrow indicates a bend or curve ahead.'
- }, {
- id: 6,
- category: 'Rules of the Road',
- question: 'When overtaking a heavy vehicle on a two-lane road, you should:',
- options: [
- 'Overtake quickly and return to your lane',
- 'Overtake slowly to avoid wind turbulence',
- 'Only overtake if there\'s a passing lane',
- 'Overtake when the vehicle signals you'
- ],
- correct: 0,
- explanation: 'Overtake quickly and decisively to minimize time spent in the oncoming lane.'
- }, {
- id: 7,
- category: 'Vehicle Controls',
- question: 'When should you use your hazard lights?',
- options: [
- 'When parking illegally',
- 'When your vehicle is broken down',
- 'When overtaking',
- 'When driving fast'
- ],
- correct: 1,
- explanation: 'Hazard lights should only be used to warn others of a stationary vehicle or emergency.'
- }, {
- id: 8,
- category: 'Speed Limits',
- question: 'What is the speed limit on a Botswana highway outside a built-up area?',
- options: [
- '80 km/h',
- '100 km/h',
- '120 km/h',
- '140 km/h'
- ],
- correct: 2,
- explanation: 'The speed limit on highways outside built-up areas is 120 km/h.'
- }, {
- id: 9,
- category: 'Parking',
- question: 'How far from a fire hydrant must you park?',
- options: [
- '3 metres',
- '5 metres',
- '10 metres',
- '15 metres'
- ],
- correct: 1,
- explanation: 'You must park at least 5 metres from a fire hydrant.'
- }, {
- id: 10,
- category: 'Rules of the Road',
- question: 'When approaching a pedestrian crossing, you should:',
- options: [
- 'Speed up to clear the crossing',
- 'Slow down and prepare to stop',
- 'Sound your horn to warn pedestrians',
- 'Continue at the same speed'
- ],
- correct: 1,
- explanation: 'Always slow down and prepare to stop at pedestrian crossings. Pedestrians have right of way.'
- }];
- }
-
- // ----- Init Test -----
- function initTest() {
- loadingState.style.display = 'none';
- testCard.style.display = 'block';
- state.startTime = Date.now();
- renderQuestion();
- startTimer();
- }
-
- // ----- Render Question -----
- function renderQuestion() {
- const q = state.questions[state.currentIndex];
- if (!q) return;
-
- currentQuestionNum.textContent = state.currentIndex + 1;
- questionCategory.textContent = q.category || 'General';
- questionText.textContent = q.question;
-
- // Update progress
- const progress = ((state.currentIndex + 1) / state.questions.length) * 100;
- progressFill.style.width = progress + '%';
-
- // Update counter
- questionCounter.textContent = `${state.currentIndex + 1} of ${state.questions.length}`;
-
- // Render options
- optionsGrid.innerHTML = '';
- const letters = ['A', 'B', 'C', 'D'];
-
- q.options.forEach((option, index) => {
- const btn = document.createElement('button');
- btn.className = 'option-btn';
- btn.setAttribute('data-index', index);
-
- // Check if this question was already answered
- const answerState = state.answers[state.currentIndex];
- const isCorrect = index === q.correct;
-
- if (answerState === 'correct') {
- btn.classList.add('disabled');
- if (isCorrect) btn.classList.add('correct');
- } else if (answerState === 'wrong') {
- btn.classList.add('disabled');
- if (isCorrect) btn.classList.add('correct');
- if (state.selectedOption === index) btn.classList.add('wrong');
- }
-
- // Show explanation if answered
- let explanationHTML = '';
- if (answerState !== null && isCorrect) {
- explanationHTML =
- `<div class="explanation show">œ“ ${q.explanation || 'Correct answer!'}</div>`;
- } else if (answerState === 'wrong' && state.selectedOption === index) {
- explanationHTML =
- `<div class="explanation show">œ— ${q.explanation || 'Incorrect. The correct answer was: ' + q.options[q.correct]}</div>`;
- }
-
- btn.innerHTML = `
- <span class="letter">${letters[index]}</span>
- <span class="option-text">${option}</span>
- <i data-lucide="check" class="result-icon" style="${answerState === 'correct' && isCorrect ? 'opacity:1;' : ''}"></i>
- <i data-lucide="x" class="result-icon" style="${answerState === 'wrong' && state.selectedOption === index ? 'opacity:1;color:#EF4444;' : ''}"></i>
- ${explanationHTML}
- `;
-
- if (answerState === null) {
- btn.addEventListener('click', function() {
- selectOption(parseInt(this.getAttribute('data-index')));
- });
- btn.addEventListener('keydown', function(e) {
- if (e.key === 'Enter' || e.key === ' ') {
- e.preventDefault();
- selectOption(parseInt(this.getAttribute('data-index')));
- }
- });
- btn.setAttribute('tabindex', '0');
- btn.setAttribute('role', 'button');
- }
-
- optionsGrid.appendChild(btn);
- });
-
- // Update buttons
- prevBtn.disabled = state.currentIndex === 0;
- if (state.currentIndex === state.questions.length - 1) {
- nextBtn.textContent = 'Finish';
- nextBtn.innerHTML = 'Finish <i data-lucide="flag"></i>';
- } else {
- nextBtn.textContent = 'Next';
- nextBtn.innerHTML = 'Next <i data-lucide="chevron-right"></i>';
- }
-
- // Rebuild icons
- if (typeof lucide !== 'undefined') {
- lucide.createIcons();
- }
-
- // Scroll to question on mobile
- const testCardEl = document.getElementById('testCard');
- if (window.innerWidth < 768) {
- testCardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
- }
- }
-
- // ----- Select Option -----
- function selectOption(index) {
- if (state.answers[state.currentIndex] !== null) return;
- if (state.isFinished) return;
-
- const q = state.questions[state.currentIndex];
- const isCorrect = index === q.correct;
-
- state.answers[state.currentIndex] = isCorrect ? 'correct' : 'wrong';
- state.selectedOption = index;
-
- renderQuestion();
-
- // Auto-advance after 1.5s if correct, 3s if wrong
- const delay = isCorrect ? 1200 : 2500;
- setTimeout(() => {
- if (state.currentIndex < state.questions.length - 1) {
- goToNext();
- } else {
- finishTest();
- }
- }, delay);
- }
-
- // ----- Navigation -----
- function goToNext() {
- if (state.currentIndex < state.questions.length - 1) {
- state.currentIndex++;
- state.selectedOption = null;
- renderQuestion();
- }
- }
-
- function goToPrev() {
- if (state.currentIndex > 0) {
- state.currentIndex--;
- state.selectedOption = null;
- renderQuestion();
- }
- }
-
- // ----- Timer -----
- function startTimer() {
- state.timer = 600;
- updateTimerDisplay();
-
- state.timerInterval = setInterval(function() {
- state.timer--;
- updateTimerDisplay();
-
- if (state.timer <= 60) {
- timerDisplay.classList.add('warning');
- }
-
- if (state.timer <= 0) {
- clearInterval(state.timerInterval);
- finishTest();
- }
- }, 1000);
- }
-
- function updateTimerDisplay() {
- const mins = Math.floor(state.timer / 60);
- const secs = state.timer % 60;
- timerText.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
- }
-
- function stopTimer() {
- if (state.timerInterval) {
- clearInterval(state.timerInterval);
- state.timerInterval = null;
- }
- }
-
- // ----- Finish Test -----
- function finishTest() {
- if (state.isFinished) return;
- state.isFinished = true;
- stopTimer();
-
- const total = state.questions.length;
- const correct = state.answers.filter(a => a === 'correct').length;
- const wrong = state.answers.filter(a => a === 'wrong').length;
-
- // Calculate time taken
- const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
- const mins = Math.floor(elapsed / 60);
- const secs = elapsed % 60;
- const timeStr = `${mins}:${secs.toString().padStart(2, '0')}`;
-
- // Show results
- testCard.style.display = 'none';
- resultsContainer.classList.add('active');
-
- finalScore.textContent = correct;
- correctCount.textContent = correct;
- wrongCount.textContent = wrong;
- accuracyPercent.textContent = `${Math.round((correct / total) * 100)}%`;
- timeTaken.textContent = timeStr;
-
- // Score message
- const pct = (correct / total) * 100;
- let message, submessage;
- if (pct >= 90) {
- message = 'ðŸŒŸ Excellent!';
- submessage = 'You\'re ready for the real test!';
- } else if (pct >= 70) {
- message = 'ðŸ‘ Great Job!';
- submessage = 'You\'re on the right track. Keep practising!';
- } else if (pct >= 50) {
- message = 'ðŸ“š Keep Going!';
- submessage = 'You have the basics. More practice will get you there.';
- } else {
- message = 'ðŸ’ª Start Learning!';
- submessage = 'You need more preparation. Road Wise Academy can help.';
- }
- scoreMessage.textContent = message;
- scoreSubmessage.textContent = submessage;
-
- // Scroll to results
- resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
- if (typeof lucide !== 'undefined') {
- lucide.createIcons();
- }
- }
-
- // ----- Retry -----
- function resetTest() {
- stopTimer();
- state.currentIndex = 0;
- state.answers = new Array(state.questions.length).fill(null);
- state.selectedOption = null;
- state.isFinished = false;
- state.timer = 600;
- state.startTime = Date.now();
- timerDisplay.classList.remove('warning');
-
- resultsContainer.classList.remove('active');
- testCard.style.display = 'block';
-
- renderQuestion();
- startTimer();
-
- if (typeof lucide !== 'undefined') {
- lucide.createIcons();
- }
- }
-
- // ----- Event Listeners -----
- prevBtn.addEventListener('click', goToPrev);
- nextBtn.addEventListener('click', function() {
- if (state.currentIndex === state.questions.length - 1) {
- // Check if all questions are answered
- const allAnswered = state.answers.every(a => a !== null);
- if (allAnswered) {
- finishTest();
- } else {
- // Find first unanswered
- const idx = state.answers.findIndex(a => a === null);
- if (idx !== -1) {
- state.currentIndex = idx;
- state.selectedOption = null;
- renderQuestion();
- }
- }
- } else {
- goToNext();
- }
- });
-
- retryBtn.addEventListener('click', resetTest);
-
- // ----- Keyboard shortcuts -----
- document.addEventListener('keydown', function(e) {
- if (e.key === 'ArrowLeft' && !prevBtn.disabled) {
- prevBtn.click();
- }
- if (e.key === 'ArrowRight') {
- nextBtn.click();
- }
- // Number keys 1-4 for options
- if (!state.isFinished && state.answers[state.currentIndex] === null) {
- const num = parseInt(e.key);
- if (num >= 1 && num <= 4) {
- const options = optionsGrid.querySelectorAll('.option-btn:not(.disabled)');
- if (options[num - 1]) {
- options[num - 1].click();
- }
- }
- }
- });
-
- // ============================================================
- // 5. INIT
- // ============================================================
-
- // Show loading then load questions
- loadingState.style.display = 'block';
- testCard.style.display = 'none';
- resultsContainer.classList.remove('active');
-
- // Small delay for UX (shows loading state)
- setTimeout(function() {
- loadQuestions();
- }, 500);
-
- console.log('œ… Road Wise Academy €” Demo Test fully loaded');
-
- })();
- </script>
+    <!-- ================================================================
+    NAVBAR
+    ================================================================ -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Road Wise Academy homepage">
+                <img src="assets/images/logo/logo.png" alt="Road Wise Academy">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="demo-test.html" aria-current="page">Demo Test</a></li>
+                <li><a href="driving-schools.html">Schools</a></li>
+                <li><a href="theory-test-guide.html">Theory Guide</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="student-zone.html" class="nav-cta">Student Zone</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================================================================
+    DEMO HERO
+    ================================================================ -->
+    <section class="demo-hero" aria-labelledby="demo-title">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="container">
+            <span class="badge">
+                <i data-lucide="zap"></i> Free Interactive Demo
+            </span>
+            <h1 class="heading-xl" id="demo-title">
+                Test Your <span class="highlight">Knowledge</span>
+            </h1>
+            <p class="text-body mx-auto">
+                Experience 10 realistic driving theory questions with instant feedback.
+                See how Road Wise Academy prepares you to pass.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================================================================
+    TEST CONTAINER
+    ================================================================ -->
+    <div class="test-container" id="testContainer">
+
+        <!-- Loading State -->
+        <div class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <p>Loading your demo test...</p>
+        </div>
+
+        <!-- Test Card -->
+        <div class="test-card" id="testCard" style="display:none;">
+            <!-- Header -->
+            <div class="test-header">
+                <div class="test-progress-text">
+                    Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">10</span>
+                </div>
+                <div class="test-timer" id="timerDisplay">
+                    <i data-lucide="clock"></i>
+                    <span id="timerText">10:00</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-track">
+                <div class="progress-bar-fill" id="progressFill"></div>
+            </div>
+
+            <!-- Question Area -->
+            <div id="questionArea">
+                <div class="question-number" id="questionCategory">Category</div>
+                <div class="question-text" id="questionText">Loading question...</div>
+
+                <div class="options-grid" id="optionsGrid">
+                    <!-- Options rendered by JS -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="test-footer">
+                <span class="question-counter" id="questionCounter">1 of 10</span>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <button class="btn btn-secondary btn-sm" id="prevBtn" disabled>
+                        <i data-lucide="chevron-left"></i> Previous
+                    </button>
+                    <button class="btn btn-primary btn-sm" id="nextBtn">
+                        Next <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="test-card results-container" id="resultsContainer">
+            <div class="results-score">
+                <div class="score-circle">
+                    <span class="score-number" id="finalScore">0</span>
+                    <span class="score-label">/ 10</span>
+                </div>
+                <div class="score-message" id="scoreMessage">Great Job!</div>
+                <div class="score-submessage" id="scoreSubmessage">You're on the right track.</div>
+            </div>
+
+            <div class="results-breakdown">
+                <div class="stat-item">
+                    <div class="stat-value" id="correctCount">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="wrongCount">0</div>
+                    <div class="stat-label">Wrong</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="accuracyPercent">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="timeTaken">0:00</div>
+                    <div class="stat-label">Time Taken</div>
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn btn-secondary" id="retryBtn">
+                    <i data-lucide="refresh-ccw"></i> Retry Demo
+                </button>
+                <a href="student-zone.html" class="btn btn-primary pulse-ring">
+                    <i data-lucide="log-in"></i> Access Full Student Zone
+                </a>
+                <a href="index.html" class="btn btn-secondary">
+                    <i data-lucide="home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================
+    FOOTER
+    ================================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo/logo.png" alt="Road Wise Academy" class="logo">
+                <p>Botswana's digital driving theory education platform. Study smart. Pass with confidence.</p>
+                <div class="mini-stats">
+                    <span><i data-lucide="users"></i> 5K+ Followers</span>
+                    <span><i data-lucide="school"></i> 5 Partner Schools</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="demo-test.html">Demo Test</a></li>
+                    <li><a href="driving-schools.html">Driving Schools</a></li>
+                    <li><a href="theory-test-guide.html">Theory Test Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li><i data-lucide="phone"></i> <a href="tel:+26775911795">+267 75 911 795</a></li>
+                    <li><i data-lucide="mail"></i> <a href="mailto:info@roadwiseacademy.co.bw">info@roadwiseacademy.co.bw</a></li>
+                    <li><i data-lucide="map-pin"></i> Gaborone, Botswana</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Join Our Community</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61563870249694" target="_blank" rel="noopener" class="social-link">
+                        <i data-lucide="facebook" class="fb-icon"></i> Facebook
+                        <span class="follower-badge">5K+</span>
+                    </a>
+                    <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="social-link">
+                        <i data-lucide="phone" class="wa-icon"></i> WhatsApp
+                    </a>
+                    <a href="#" class="social-link">
+                        <i data-lucide="users" class="comm-icon"></i> WhatsApp Community
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Road Wise Academy. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================================
+    JAVASCRIPT — PRODUCTION QUALITY
+    ================================================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ============================================================
+            // 1. LUCIDE ICONS
+            // ============================================================
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // ============================================================
+            // 2. NAVBAR
+            // ============================================================
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                navbar.classList.toggle('scrolled', scrollY > 50);
+            }, { passive: true });
+
+            // ============================================================
+            // 3. MOBILE NAV
+            // ============================================================
+            const toggle = document.getElementById('navToggle');
+            const menu = document.getElementById('navMenu');
+
+            if (toggle && menu) {
+                const toggleMenu = function() {
+                    const isOpen = menu.classList.toggle('active');
+                    const icon = toggle.querySelector('i');
+                    if (icon) {
+                        icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    }
+                    toggle.setAttribute('aria-expanded', isOpen);
+                };
+
+                toggle.addEventListener('click', toggleMenu);
+
+                menu.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        menu.classList.remove('active');
+                        const icon = toggle.querySelector('i');
+                        if (icon) {
+                            icon.setAttribute('data-lucide', 'menu');
+                            if (typeof lucide !== 'undefined') lucide.createIcons();
+                        }
+                        toggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // ============================================================
+            // 4. DEMO TEST ENGINE
+            // ============================================================
+
+            // ----- State -----
+            const state = {
+                questions: [],
+                currentIndex: 0,
+                answers: [], // 'correct' | 'wrong' | null
+                selectedOption: null,
+                isAnswered: false,
+                timer: 600, // 10 minutes in seconds
+                timerInterval: null,
+                isFinished: false,
+                startTime: null,
+            };
+
+            // ----- DOM Refs -----
+            const loadingState = document.getElementById('loadingState');
+            const testCard = document.getElementById('testCard');
+            const resultsContainer = document.getElementById('resultsContainer');
+
+            const currentQuestionNum = document.getElementById('currentQuestionNum');
+            const totalQuestions = document.getElementById('totalQuestions');
+            const timerText = document.getElementById('timerText');
+            const timerDisplay = document.getElementById('timerDisplay');
+            const progressFill = document.getElementById('progressFill');
+
+            const questionCategory = document.getElementById('questionCategory');
+            const questionText = document.getElementById('questionText');
+            const optionsGrid = document.getElementById('optionsGrid');
+
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const questionCounter = document.getElementById('questionCounter');
+
+            const finalScore = document.getElementById('finalScore');
+            const scoreMessage = document.getElementById('scoreMessage');
+            const scoreSubmessage = document.getElementById('scoreSubmessage');
+            const correctCount = document.getElementById('correctCount');
+            const wrongCount = document.getElementById('wrongCount');
+            const accuracyPercent = document.getElementById('accuracyPercent');
+            const timeTaken = document.getElementById('timeTaken');
+
+            const retryBtn = document.getElementById('retryBtn');
+
+            // ----- Load Questions -----
+            async function loadQuestions() {
+                try {
+                    const response = await fetch('data/demo-questions.json');
+                    if (!response.ok) throw new Error('Failed to load questions');
+                    const data = await response.json();
+                    state.questions = data;
+                    state.answers = new Array(data.length).fill(null);
+                    totalQuestions.textContent = data.length;
+                    initTest();
+                } catch (error) {
+                    console.error('Error loading questions:', error);
+                    // Fallback: use hardcoded questions if JSON fails
+                    state.questions = getFallbackQuestions();
+                    state.answers = new Array(state.questions.length).fill(null);
+                    totalQuestions.textContent = state.questions.length;
+                    initTest();
+                }
+            }
+
+            // ----- Fallback Questions (if JSON fails) -----
+            function getFallbackQuestions() {
+                return [{
+                    id: 1,
+                    category: 'Road Signs',
+                    question: 'What does a red circle with a white horizontal bar inside mean?',
+                    options: [
+                        'No entry',
+                        'Speed limit',
+                        'No parking',
+                        'One-way street'
+                    ],
+                    correct: 0,
+                    explanation: 'A red circle with a white bar indicates "No Entry". You must not enter this road.'
+                }, {
+                    id: 2,
+                    category: 'Rules of the Road',
+                    question: 'When two vehicles approach an intersection from different roads at the same time, who has right of way?',
+                    options: [
+                        'The vehicle on the right',
+                        'The vehicle on the left',
+                        'The faster vehicle',
+                        'The larger vehicle'
+                    ],
+                    correct: 0,
+                    explanation: 'In Botswana, the vehicle on the right has right of way at an uncontrolled intersection.'
+                }, {
+                    id: 3,
+                    category: 'Safety',
+                    question: 'What is the minimum following distance you should maintain in wet conditions?',
+                    options: [
+                        '2 seconds',
+                        '4 seconds',
+                        '6 seconds',
+                        '8 seconds'
+                    ],
+                    correct: 1,
+                    explanation: 'In wet conditions, you should maintain at least a 4-second following distance to allow for longer stopping distances.'
+                }, {
+                    id: 4,
+                    category: 'Licencing',
+                    question: 'If you accumulate 12 demerit points on your licence, what happens?',
+                    options: [
+                        'Nothing, you\'re fine',
+                        'You receive a warning',
+                        'Your licence is suspended',
+                        'You must retake the test'
+                    ],
+                    correct: 2,
+                    explanation: 'In Botswana, accumulating 12 or more demerit points results in licence suspension.'
+                }, {
+                    id: 5,
+                    category: 'Road Signs',
+                    question: 'What does a yellow diamond-shaped sign with a black arrow indicate?',
+                    options: [
+                        'Bend ahead',
+                        'Sharp curve',
+                        'Two-way traffic',
+                        'Merging traffic'
+                    ],
+                    correct: 0,
+                    explanation: 'A yellow diamond with a black arrow indicates a bend or curve ahead.'
+                }, {
+                    id: 6,
+                    category: 'Rules of the Road',
+                    question: 'When overtaking a heavy vehicle on a two-lane road, you should:',
+                    options: [
+                        'Overtake quickly and return to your lane',
+                        'Overtake slowly to avoid wind turbulence',
+                        'Only overtake if there\'s a passing lane',
+                        'Overtake when the vehicle signals you'
+                    ],
+                    correct: 0,
+                    explanation: 'Overtake quickly and decisively to minimize time spent in the oncoming lane.'
+                }, {
+                    id: 7,
+                    category: 'Vehicle Controls',
+                    question: 'When should you use your hazard lights?',
+                    options: [
+                        'When parking illegally',
+                        'When your vehicle is broken down',
+                        'When overtaking',
+                        'When driving fast'
+                    ],
+                    correct: 1,
+                    explanation: 'Hazard lights should only be used to warn others of a stationary vehicle or emergency.'
+                }, {
+                    id: 8,
+                    category: 'Speed Limits',
+                    question: 'What is the speed limit on a Botswana highway outside a built-up area?',
+                    options: [
+                        '80 km/h',
+                        '100 km/h',
+                        '120 km/h',
+                        '140 km/h'
+                    ],
+                    correct: 2,
+                    explanation: 'The speed limit on highways outside built-up areas is 120 km/h.'
+                }, {
+                    id: 9,
+                    category: 'Parking',
+                    question: 'How far from a fire hydrant must you park?',
+                    options: [
+                        '3 metres',
+                        '5 metres',
+                        '10 metres',
+                        '15 metres'
+                    ],
+                    correct: 1,
+                    explanation: 'You must park at least 5 metres from a fire hydrant.'
+                }, {
+                    id: 10,
+                    category: 'Rules of the Road',
+                    question: 'When approaching a pedestrian crossing, you should:',
+                    options: [
+                        'Speed up to clear the crossing',
+                        'Slow down and prepare to stop',
+                        'Sound your horn to warn pedestrians',
+                        'Continue at the same speed'
+                    ],
+                    correct: 1,
+                    explanation: 'Always slow down and prepare to stop at pedestrian crossings. Pedestrians have right of way.'
+                }];
+            }
+
+            // ----- Init Test -----
+            function initTest() {
+                loadingState.style.display = 'none';
+                testCard.style.display = 'block';
+                state.startTime = Date.now();
+                renderQuestion();
+                startTimer();
+            }
+
+            // ----- Render Question -----
+            function renderQuestion() {
+                const q = state.questions[state.currentIndex];
+                if (!q) return;
+
+                currentQuestionNum.textContent = state.currentIndex + 1;
+                questionCategory.textContent = q.category || 'General';
+                questionText.textContent = q.question;
+
+                // Update progress
+                const progress = ((state.currentIndex + 1) / state.questions.length) * 100;
+                progressFill.style.width = progress + '%';
+
+                // Update counter
+                questionCounter.textContent = `${state.currentIndex + 1} of ${state.questions.length}`;
+
+                // Render options
+                optionsGrid.innerHTML = '';
+                const letters = ['A', 'B', 'C', 'D'];
+
+                q.options.forEach((option, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.setAttribute('data-index', index);
+
+                    // Check if this question was already answered
+                    const answerState = state.answers[state.currentIndex];
+                    const isCorrect = index === q.correct;
+
+                    if (answerState === 'correct') {
+                        btn.classList.add('disabled');
+                        if (isCorrect) btn.classList.add('correct');
+                    } else if (answerState === 'wrong') {
+                        btn.classList.add('disabled');
+                        if (isCorrect) btn.classList.add('correct');
+                        if (state.selectedOption === index) btn.classList.add('wrong');
+                    }
+
+                    // Show explanation if answered
+                    let explanationHTML = '';
+                    if (answerState !== null && isCorrect) {
+                        explanationHTML =
+                            `<div class="explanation show">✓ ${q.explanation || 'Correct answer!'}</div>`;
+                    } else if (answerState === 'wrong' && state.selectedOption === index) {
+                        explanationHTML =
+                            `<div class="explanation show">✗ ${q.explanation || 'Incorrect. The correct answer was: ' + q.options[q.correct]}</div>`;
+                    }
+
+                    btn.innerHTML = `
+                            <span class="letter">${letters[index]}</span>
+                            <span class="option-text">${option}</span>
+                            <i data-lucide="check" class="result-icon" style="${answerState === 'correct' && isCorrect ? 'opacity:1;' : ''}"></i>
+                            <i data-lucide="x" class="result-icon" style="${answerState === 'wrong' && state.selectedOption === index ? 'opacity:1;color:#EF4444;' : ''}"></i>
+                            ${explanationHTML}
+                        `;
+
+                    if (answerState === null) {
+                        btn.addEventListener('click', function() {
+                            selectOption(parseInt(this.getAttribute('data-index')));
+                        });
+                        btn.addEventListener('keydown', function(e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                selectOption(parseInt(this.getAttribute('data-index')));
+                            }
+                        });
+                        btn.setAttribute('tabindex', '0');
+                        btn.setAttribute('role', 'button');
+                    }
+
+                    optionsGrid.appendChild(btn);
+                });
+
+                // Update buttons
+                prevBtn.disabled = state.currentIndex === 0;
+                if (state.currentIndex === state.questions.length - 1) {
+                    nextBtn.textContent = 'Finish';
+                    nextBtn.innerHTML = 'Finish <i data-lucide="flag"></i>';
+                } else {
+                    nextBtn.textContent = 'Next';
+                    nextBtn.innerHTML = 'Next <i data-lucide="chevron-right"></i>';
+                }
+
+                // Rebuild icons
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+
+                // Scroll to question on mobile
+                const testCardEl = document.getElementById('testCard');
+                if (window.innerWidth < 768) {
+                    testCardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+
+            // ----- Select Option -----
+            function selectOption(index) {
+                if (state.answers[state.currentIndex] !== null) return;
+                if (state.isFinished) return;
+
+                const q = state.questions[state.currentIndex];
+                const isCorrect = index === q.correct;
+
+                state.answers[state.currentIndex] = isCorrect ? 'correct' : 'wrong';
+                state.selectedOption = index;
+
+                renderQuestion();
+
+                // Auto-advance after 1.5s if correct, 3s if wrong
+                const delay = isCorrect ? 1200 : 2500;
+                setTimeout(() => {
+                    if (state.currentIndex < state.questions.length - 1) {
+                        goToNext();
+                    } else {
+                        finishTest();
+                    }
+                }, delay);
+            }
+
+            // ----- Navigation -----
+            function goToNext() {
+                if (state.currentIndex < state.questions.length - 1) {
+                    state.currentIndex++;
+                    state.selectedOption = null;
+                    renderQuestion();
+                }
+            }
+
+            function goToPrev() {
+                if (state.currentIndex > 0) {
+                    state.currentIndex--;
+                    state.selectedOption = null;
+                    renderQuestion();
+                }
+            }
+
+            // ----- Timer -----
+            function startTimer() {
+                state.timer = 600;
+                updateTimerDisplay();
+
+                state.timerInterval = setInterval(function() {
+                    state.timer--;
+                    updateTimerDisplay();
+
+                    if (state.timer <= 60) {
+                        timerDisplay.classList.add('warning');
+                    }
+
+                    if (state.timer <= 0) {
+                        clearInterval(state.timerInterval);
+                        finishTest();
+                    }
+                }, 1000);
+            }
+
+            function updateTimerDisplay() {
+                const mins = Math.floor(state.timer / 60);
+                const secs = state.timer % 60;
+                timerText.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            function stopTimer() {
+                if (state.timerInterval) {
+                    clearInterval(state.timerInterval);
+                    state.timerInterval = null;
+                }
+            }
+
+            // ----- Finish Test -----
+            function finishTest() {
+                if (state.isFinished) return;
+                state.isFinished = true;
+                stopTimer();
+
+                const total = state.questions.length;
+                const correct = state.answers.filter(a => a === 'correct').length;
+                const wrong = state.answers.filter(a => a === 'wrong').length;
+
+                // Calculate time taken
+                const elapsed = Math.floor((Date.now() - state.startTime) / 1000);
+                const mins = Math.floor(elapsed / 60);
+                const secs = elapsed % 60;
+                const timeStr = `${mins}:${secs.toString().padStart(2, '0')}`;
+
+                // Show results
+                testCard.style.display = 'none';
+                resultsContainer.classList.add('active');
+
+                finalScore.textContent = correct;
+                correctCount.textContent = correct;
+                wrongCount.textContent = wrong;
+                accuracyPercent.textContent = `${Math.round((correct / total) * 100)}%`;
+                timeTaken.textContent = timeStr;
+
+                // Score message
+                const pct = (correct / total) * 100;
+                let message, submessage;
+                if (pct >= 90) {
+                    message = 'Excellent!';
+                    submessage = 'You\'re ready for the real test!';
+                } else if (pct >= 70) {
+                    message = 'Great Job!';
+                    submessage = 'You\'re on the right track. Keep practising!';
+                } else if (pct >= 50) {
+                    message = 'Keep Going!';
+                    submessage = 'You have the basics. More practice will get you there.';
+                } else {
+                    message = 'Start Learning!';
+                    submessage = 'You need more preparation. Road Wise Academy can help.';
+                }
+                scoreMessage.textContent = message;
+                scoreSubmessage.textContent = submessage;
+
+                // Scroll to results
+                resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+
+            // ----- Retry -----
+            function resetTest() {
+                stopTimer();
+                state.currentIndex = 0;
+                state.answers = new Array(state.questions.length).fill(null);
+                state.selectedOption = null;
+                state.isFinished = false;
+                state.timer = 600;
+                state.startTime = Date.now();
+                timerDisplay.classList.remove('warning');
+
+                resultsContainer.classList.remove('active');
+                testCard.style.display = 'block';
+
+                renderQuestion();
+                startTimer();
+
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+
+            // ----- Event Listeners -----
+            prevBtn.addEventListener('click', goToPrev);
+            nextBtn.addEventListener('click', function() {
+                if (state.currentIndex === state.questions.length - 1) {
+                    // Check if all questions are answered
+                    const allAnswered = state.answers.every(a => a !== null);
+                    if (allAnswered) {
+                        finishTest();
+                    } else {
+                        // Find first unanswered
+                        const idx = state.answers.findIndex(a => a === null);
+                        if (idx !== -1) {
+                            state.currentIndex = idx;
+                            state.selectedOption = null;
+                            renderQuestion();
+                        }
+                    }
+                } else {
+                    goToNext();
+                }
+            });
+
+            retryBtn.addEventListener('click', resetTest);
+
+            // ----- Keyboard shortcuts -----
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft' && !prevBtn.disabled) {
+                    prevBtn.click();
+                }
+                if (e.key === 'ArrowRight') {
+                    nextBtn.click();
+                }
+                // Number keys 1-4 for options
+                if (!state.isFinished && state.answers[state.currentIndex] === null) {
+                    const num = parseInt(e.key);
+                    if (num >= 1 && num <= 4) {
+                        const options = optionsGrid.querySelectorAll('.option-btn:not(.disabled)');
+                        if (options[num - 1]) {
+                            options[num - 1].click();
+                        }
+                    }
+                }
+            });
+
+            // ============================================================
+            // 5. INIT
+            // ============================================================
+
+            // Show loading then load questions
+            loadingState.style.display = 'block';
+            testCard.style.display = 'none';
+            resultsContainer.classList.remove('active');
+
+            // Small delay for UX (shows loading state)
+            setTimeout(function() {
+                loadQuestions();
+            }, 500);
+
+            console.log('Road Wise Academy — Demo Test loaded');
+
+        })();
+    </script>
 
 </body>
 </html>
-
-
-
-

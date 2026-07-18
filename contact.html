@@ -1,1252 +1,1232 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Contact Us €“ Road Wise Academy</title>
- <meta name="description" content="Get in touch with Road Wise Academy. Connect via WhatsApp, join our community, or enquire about partnerships.">
- <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – Road Wise Academy</title>
+    <meta name="description" content="Get in touch with Road Wise Academy. Connect via WhatsApp, join our community, or enquire about partnerships.">
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
 
- <!-- Open Graph -->
- <meta property="og:title" content="Contact Road Wise Academy">
- <meta property="og:description" content="Connect with us via WhatsApp, join our community, or enquire about partnerships.">
- <meta property="og:type" content="website">
- <meta property="og:url" content="https://roadwiseacademy.co.bw/contact.html">
- <meta property="og:image" content="https://roadwiseacademy.co.bw/assets/images/logo/logo.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Road Wise Academy">
+    <meta property="og:description" content="Connect with us via WhatsApp, join our community, or enquire about partnerships.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roadwiseacademy.co.bw/contact.html">
+    <meta property="og:image" content="https://roadwiseacademy.co.bw/assets/images/logo/logo.png">
 
- <!-- Google Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
 
- <!-- Lucide Icons -->
- <script src="https://unpkg.com/lucide@latest" defer></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
- <style>
- /* ================================================================
- ROAD WISE ACADEMY €” CONTACT STYLES
- ================================================================ */
+    <style>
+        /* ================================================================
+               ROAD WISE ACADEMY — CONTACT STYLES
+               ================================================================ */
 
- /* ---------- Reset & Variables ---------- */
- *,
- *::before,
- *::after {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- }
+        /* ---------- Reset & Variables ---------- */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
- :root {
- --rwa-red: #E31E24;
- --rwa-red-dark: #B8181D;
- --rwa-red-glow: rgba(227, 30, 36, 0.15);
- --rwa-black: #0A0A0A;
- --rwa-black-light: #1A1A1A;
- --rwa-white: #FFFFFF;
- --rwa-off-white: #F8F9FC;
- --rwa-grey: #EEF2F6;
- --rwa-grey-medium: #8A8F98;
- --rwa-grey-dark: #4A4D55;
+        :root {
+            --rwa-red: #E31E24;
+            --rwa-red-dark: #B8181D;
+            --rwa-red-glow: rgba(227, 30, 36, 0.15);
+            --rwa-black: #0A0A0A;
+            --rwa-black-light: #1A1A1A;
+            --rwa-white: #FFFFFF;
+            --rwa-off-white: #F8F9FC;
+            --rwa-grey: #EEF2F6;
+            --rwa-grey-medium: #8A8F98;
+            --rwa-grey-dark: #4A4D55;
 
- --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
- --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.07);
- --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.10);
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 20px 60px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.10);
 
- --radius-sm: 12px;
- --radius-md: 20px;
- --radius-lg: 32px;
- --radius-full: 9999px;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+            --radius-full: 9999px;
 
- --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
- --font-heading: 'Poppins', 'Inter', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Poppins', 'Inter', sans-serif;
 
- --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
- }
+            --transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
- html {
- scroll-behavior: smooth;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
- body {
- font-family: var(--font-body);
- background: var(--rwa-off-white);
- color: var(--rwa-black);
- line-height: 1.6;
- overflow-x: hidden;
- min-height: 100vh;
- }
+        body {
+            font-family: var(--font-body);
+            background: var(--rwa-off-white);
+            color: var(--rwa-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
 
- a {
- text-decoration: none;
- color: inherit;
- }
- img {
- max-width: 100%;
- display: block;
- }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
- .container {
- max-width: 1280px;
- margin: 0 auto;
- padding: 0 24px;
- }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
- /* ---------- Typography ---------- */
- .badge {
- display: inline-flex;
- align-items: center;
- gap: 8px;
- font-weight: 600;
- font-size: 0.75rem;
- letter-spacing: 1px;
- text-transform: uppercase;
- color: var(--rwa-red);
- background: rgba(227, 30, 36, 0.08);
- padding: 6px 18px;
- border-radius: var(--radius-full);
- border: 1px solid rgba(227, 30, 36, 0.10);
- margin-bottom: 16px;
- width: fit-content;
- }
- .badge-center {
- margin-left: auto;
- margin-right: auto;
- }
+        /* ---------- Typography ---------- */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--rwa-red);
+            background: rgba(227, 30, 36, 0.08);
+            padding: 6px 18px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(227, 30, 36, 0.10);
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+        .badge-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
- .heading-xl {
- font-family: var(--font-heading);
- font-weight: 900;
- font-size: clamp(2.8rem, 5vw, 4.2rem);
- line-height: 1.05;
- letter-spacing: -2px;
- }
- .heading-xl .highlight {
- color: var(--rwa-red);
- position: relative;
- }
+        .heading-xl {
+            font-family: var(--font-heading);
+            font-weight: 900;
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+        .heading-xl .highlight {
+            color: var(--rwa-red);
+            position: relative;
+        }
 
- .heading-lg {
- font-family: var(--font-heading);
- font-weight: 800;
- font-size: clamp(2rem, 3vw, 2.8rem);
- line-height: 1.15;
- letter-spacing: -1px;
- }
- .heading-lg .highlight {
- color: var(--rwa-red);
- }
+        .heading-lg {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+        .heading-lg .highlight {
+            color: var(--rwa-red);
+        }
 
- .text-body {
- font-size: 1.15rem;
- color: var(--rwa-grey-dark);
- line-height: 1.7;
- max-width: 560px;
- }
+        .text-body {
+            font-size: 1.15rem;
+            color: var(--rwa-grey-dark);
+            line-height: 1.7;
+            max-width: 560px;
+        }
 
- .text-center {
- text-align: center;
- }
- .mx-auto {
- margin-left: auto;
- margin-right: auto;
- }
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
- /* ---------- Buttons ---------- */
- .btn {
- display: inline-flex;
- align-items: center;
- justify-content: center;
- gap: 10px;
- padding: 16px 34px;
- border-radius: var(--radius-sm);
- font-weight: 600;
- font-size: 1rem;
- font-family: var(--font-body);
- border: 2px solid transparent;
- transition: all var(--transition);
- cursor: pointer;
- position: relative;
- overflow: hidden;
- }
- .btn::after {
- content: '';
- position: absolute;
- inset: 0;
- background: rgba(255, 255, 255, 0.08);
- transform: translateX(-100%);
- transition: transform var(--transition);
- }
- .btn:hover::after {
- transform: translateX(0);
- }
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 34px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            border: 2px solid transparent;
+            transition: all var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(-100%);
+            transition: transform var(--transition);
+        }
+        .btn:hover::after {
+            transform: translateX(0);
+        }
 
- .btn-primary {
- background: var(--rwa-red);
- color: var(--rwa-white);
- border-color: var(--rwa-red);
- box-shadow: 0 8px 30px rgba(227, 30, 36, 0.30);
- }
- .btn-primary:hover {
- background: var(--rwa-red-dark);
- border-color: var(--rwa-red-dark);
- transform: translateY(-3px) scale(1.02);
- box-shadow: 0 16px 48px rgba(227, 30, 36, 0.40);
- }
+        .btn-primary {
+            background: var(--rwa-red);
+            color: var(--rwa-white);
+            border-color: var(--rwa-red);
+            box-shadow: 0 8px 30px rgba(227, 30, 36, 0.30);
+        }
+        .btn-primary:hover {
+            background: var(--rwa-red-dark);
+            border-color: var(--rwa-red-dark);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(227, 30, 36, 0.40);
+        }
 
- .btn-secondary {
- background: var(--rwa-white);
- color: var(--rwa-black);
- border-color: #D1D5DB;
- }
- .btn-secondary:hover {
- border-color: var(--rwa-black);
- transform: translateY(-3px);
- box-shadow: var(--shadow-sm);
- }
+        .btn-secondary {
+            background: var(--rwa-white);
+            color: var(--rwa-black);
+            border-color: #D1D5DB;
+        }
+        .btn-secondary:hover {
+            border-color: var(--rwa-black);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
 
- .btn-success {
- background: #10B981;
- color: var(--rwa-white);
- border-color: #10B981;
- box-shadow: 0 8px 30px rgba(16, 185, 129, 0.30);
- }
- .btn-success:hover {
- background: #059669;
- border-color: #059669;
- transform: translateY(-3px) scale(1.02);
- box-shadow: 0 16px 48px rgba(16, 185, 129, 0.40);
- }
+        .btn-success {
+            background: #10B981;
+            color: var(--rwa-white);
+            border-color: #10B981;
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.30);
+        }
+        .btn-success:hover {
+            background: #059669;
+            border-color: #059669;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(16, 185, 129, 0.40);
+        }
 
- .btn-outline-light {
- background: transparent;
- color: var(--rwa-white);
- border-color: rgba(255, 255, 255, 0.25);
- }
- .btn-outline-light:hover {
- background: rgba(255, 255, 255, 0.08);
- border-color: var(--rwa-white);
- transform: translateY(-3px);
- }
+        .btn-outline-light {
+            background: transparent;
+            color: var(--rwa-white);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--rwa-white);
+            transform: translateY(-3px);
+        }
 
- .btn-sm {
- padding: 10px 22px;
- font-size: 0.9rem;
- }
- .btn-lg {
- padding: 20px 48px;
- font-size: 1.15rem;
- }
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 0.9rem;
+        }
+        .btn-lg {
+            padding: 20px 48px;
+            font-size: 1.15rem;
+        }
 
- /* ================================================================
- NAVBAR
- ================================================================ */
- .navbar {
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- z-index: 1000;
- padding: 18px 24px;
- transition: all var(--transition);
- background: transparent;
- }
- .navbar.scrolled {
- background: rgba(255, 255, 255, 0.92);
- backdrop-filter: blur(20px) saturate(180%);
- box-shadow: 0 1px 40px rgba(0, 0, 0, 0.06);
- padding: 12px 24px;
- }
- .nav-container {
- max-width: 1280px;
- margin: 0 auto;
- display: flex;
- align-items: center;
- justify-content: space-between;
- }
- .nav-logo img {
- height: 44px;
- width: auto;
- }
- .nav-menu {
- display: flex;
- align-items: center;
- gap: 36px;
- list-style: none;
- font-weight: 500;
- font-size: 0.95rem;
- }
- .nav-menu a {
- color: var(--rwa-black);
- transition: color 0.2s;
- position: relative;
- }
- .nav-menu a:hover {
- color: var(--rwa-red);
- }
- .nav-menu a::after {
- content: '';
- position: absolute;
- bottom: -6px;
- left: 0;
- width: 0;
- height: 2.5px;
- background: var(--rwa-red);
- transition: width var(--transition);
- border-radius: 10px;
- }
- .nav-menu a:hover::after {
- width: 100%;
- }
- .nav-cta {
- background: var(--rwa-red);
- color: var(--rwa-white) !important;
- padding: 10px 24px;
- border-radius: var(--radius-sm);
- font-weight: 600;
- transition: all var(--transition);
- }
- .nav-cta:hover {
- background: var(--rwa-red-dark) !important;
- transform: translateY(-2px);
- box-shadow: 0 8px 24px rgba(227, 30, 36, 0.30);
- }
- .nav-cta::after {
- display: none !important;
- }
+        /* ================================================================
+               NAVBAR
+               ================================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 18px 24px;
+            transition: all var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: 0 1px 40px rgba(0, 0, 0, 0.06);
+            padding: 12px 24px;
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo img {
+            height: 44px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .nav-menu a {
+            color: var(--rwa-black);
+            transition: color 0.2s;
+            position: relative;
+        }
+        .nav-menu a:hover {
+            color: var(--rwa-red);
+        }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--rwa-red);
+            transition: width var(--transition);
+            border-radius: 10px;
+        }
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        .nav-cta {
+            background: var(--rwa-red);
+            color: var(--rwa-white) !important;
+            padding: 10px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            transition: all var(--transition);
+        }
+        .nav-cta:hover {
+            background: var(--rwa-red-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(227, 30, 36, 0.30);
+        }
+        .nav-cta::after {
+            display: none !important;
+        }
 
- .nav-toggle {
- display: none;
- background: none;
- border: none;
- font-size: 1.8rem;
- color: var(--rwa-black);
- cursor: pointer;
- padding: 4px;
- }
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--rwa-black);
+            cursor: pointer;
+            padding: 4px;
+        }
 
- /* ================================================================
- PAGE HERO
- ================================================================ */
- .page-hero {
- padding: 140px 24px 60px;
- background: var(--rwa-off-white);
- text-align: center;
- position: relative;
- overflow: hidden;
- }
- .page-hero .orb {
- position: absolute;
- border-radius: 50%;
- filter: blur(120px);
- opacity: 0.10;
- pointer-events: none;
- }
- .page-hero .orb-1 {
- width: 400px;
- height: 400px;
- background: var(--rwa-red);
- top: -150px;
- right: -100px;
- }
- .page-hero .orb-2 {
- width: 300px;
- height: 300px;
- background: var(--rwa-black);
- bottom: -100px;
- left: -50px;
- opacity: 0.05;
- }
+        /* ================================================================
+               PAGE HERO
+               ================================================================ */
+        .page-hero {
+            padding: 140px 24px 60px;
+            background: var(--rwa-off-white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.10;
+            pointer-events: none;
+        }
+        .page-hero .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--rwa-red);
+            top: -150px;
+            right: -100px;
+        }
+        .page-hero .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--rwa-black);
+            bottom: -100px;
+            left: -50px;
+            opacity: 0.05;
+        }
 
- .page-hero .badge {
- margin: 0 auto 16px;
- }
- .page-hero .text-body {
- margin: 12px auto 0;
- }
+        .page-hero .badge {
+            margin: 0 auto 16px;
+        }
+        .page-hero .text-body {
+            margin: 12px auto 0;
+        }
 
- /* ================================================================
- CONTACT GRID
- ================================================================ */
- .contact-section {
- padding: 40px 0 80px;
- }
+        /* ================================================================
+               CONTACT GRID
+               ================================================================ */
+        .contact-section {
+            padding: 40px 0 80px;
+        }
 
- .contact-grid {
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 48px;
- align-items: start;
- }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
 
- /* ----- Left: Contact Cards ----- */
- .contact-methods {
- display: flex;
- flex-direction: column;
- gap: 20px;
- }
+        /* ----- Left: Contact Cards ----- */
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
- .contact-card {
- background: var(--rwa-white);
- border-radius: var(--radius-md);
- padding: 28px 32px;
- border: 1px solid var(--rwa-grey);
- display: flex;
- align-items: center;
- gap: 20px;
- transition: all var(--transition);
- }
- .contact-card:hover {
- transform: translateX(6px);
- box-shadow: var(--shadow-md);
- border-color: transparent;
- }
+        .contact-card {
+            background: var(--rwa-white);
+            border-radius: var(--radius-md);
+            padding: 28px 32px;
+            border: 1px solid var(--rwa-grey);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all var(--transition);
+        }
+        .contact-card:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
 
- .contact-card .icon-wrap {
- display: inline-flex;
- align-items: center;
- justify-content: center;
- width: 56px;
- height: 56px;
- border-radius: 50%;
- background: rgba(227, 30, 36, 0.06);
- color: var(--rwa-red);
- flex-shrink: 0;
- }
- .contact-card .icon-wrap i {
- width: 28px;
- height: 28px;
- }
+        .contact-card .icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(227, 30, 36, 0.06);
+            color: var(--rwa-red);
+            flex-shrink: 0;
+        }
+        .contact-card .icon-wrap i {
+            width: 28px;
+            height: 28px;
+        }
 
- .contact-card .info h4 {
- font-family: var(--font-heading);
- font-weight: 700;
- font-size: 1.05rem;
- margin-bottom: 2px;
- }
- .contact-card .info p {
- color: var(--rwa-grey-medium);
- font-size: 0.95rem;
- }
- .contact-card .info a {
- color: var(--rwa-red);
- font-weight: 600;
- transition: color 0.2s;
- }
- .contact-card .info a:hover {
- color: var(--rwa-red-dark);
- }
+        .contact-card .info h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 2px;
+        }
+        .contact-card .info p {
+            color: var(--rwa-grey-medium);
+            font-size: 0.95rem;
+        }
+        .contact-card .info a {
+            color: var(--rwa-red);
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .contact-card .info a:hover {
+            color: var(--rwa-red-dark);
+        }
 
- /* ----- Right: Enquiry Form ----- */
- .form-card {
- background: var(--rwa-white);
- border-radius: var(--radius-md);
- padding: 36px 32px;
- border: 1px solid var(--rwa-grey);
- box-shadow: var(--shadow-sm);
- }
- .form-card h3 {
- font-family: var(--font-heading);
- font-weight: 700;
- font-size: 1.4rem;
- margin-bottom: 6px;
- }
- .form-card p {
- color: var(--rwa-grey-dark);
- margin-bottom: 24px;
- }
+        /* ----- Right: Enquiry Form ----- */
+        .form-card {
+            background: var(--rwa-white);
+            border-radius: var(--radius-md);
+            padding: 36px 32px;
+            border: 1px solid var(--rwa-grey);
+            box-shadow: var(--shadow-sm);
+        }
+        .form-card h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+        .form-card p {
+            color: var(--rwa-grey-dark);
+            margin-bottom: 24px;
+        }
 
- .form-group {
- margin-bottom: 18px;
- }
- .form-group label {
- display: block;
- font-weight: 600;
- font-size: 0.9rem;
- color: var(--rwa-black);
- margin-bottom: 6px;
- }
- .form-group input,
- .form-group select,
- .form-group textarea {
- width: 100%;
- padding: 12px 16px;
- border: 2px solid var(--rwa-grey);
- border-radius: var(--radius-sm);
- font-family: var(--font-body);
- font-size: 1rem;
- color: var(--rwa-black);
- transition: border-color var(--transition);
- background: var(--rwa-white);
- }
- .form-group input:focus,
- .form-group select:focus,
- .form-group textarea:focus {
- outline: none;
- border-color: var(--rwa-red);
- }
- .form-group textarea {
- min-height: 120px;
- resize: vertical;
- }
- .form-group input::placeholder,
- .form-group textarea::placeholder {
- color: var(--rwa-grey-medium);
- }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--rwa-black);
+            margin-bottom: 6px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--rwa-grey);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--rwa-black);
+            transition: border-color var(--transition);
+            background: var(--rwa-white);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--rwa-red);
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--rwa-grey-medium);
+        }
 
- .form-row {
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 16px;
- }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
 
- .form-success {
- display: none;
- padding: 20px;
- background: #ECFDF5;
- border-radius: var(--radius-sm);
- border: 1px solid #10B981;
- color: #065F46;
- margin-top: 16px;
- text-align: center;
- }
- .form-success.active {
- display: block;
- }
+        .form-success {
+            display: none;
+            padding: 20px;
+            background: #ECFDF5;
+            border-radius: var(--radius-sm);
+            border: 1px solid #10B981;
+            color: #065F46;
+            margin-top: 16px;
+            text-align: center;
+        }
+        .form-success.active {
+            display: block;
+        }
 
- /* ----- Social Links ----- */
- .social-section {
- margin-top: 40px;
- padding-top: 40px;
- border-top: 2px solid var(--rwa-grey);
- }
- .social-section h3 {
- font-family: var(--font-heading);
- font-weight: 700;
- font-size: 1.2rem;
- text-align: center;
- margin-bottom: 20px;
- }
- .social-grid {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: 16px;
- }
- .social-grid .social-link {
- display: flex;
- align-items: center;
- gap: 10px;
- padding: 14px 24px;
- border-radius: var(--radius-sm);
- background: var(--rwa-white);
- border: 1px solid var(--rwa-grey);
- color: var(--rwa-black);
- font-weight: 600;
- transition: all var(--transition);
- }
- .social-grid .social-link:hover {
- transform: translateY(-4px);
- box-shadow: var(--shadow-md);
- border-color: transparent;
- }
- .social-grid .social-link i {
- width: 24px;
- height: 24px;
- }
- .social-grid .social-link .fb {
- color: #1877F2;
- }
- .social-grid .social-link .wa {
- color: #25D366;
- }
- .social-grid .social-link .ig {
- color: #E4405F;
- }
- .social-grid .social-link .tt {
- color: #FF0050;
- }
- .social-grid .social-link .comm {
- color: #00E676;
- }
+        /* ----- Social Links ----- */
+        .social-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid var(--rwa-grey);
+        }
+        .social-section h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .social-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+        .social-grid .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: var(--radius-sm);
+            background: var(--rwa-white);
+            border: 1px solid var(--rwa-grey);
+            color: var(--rwa-black);
+            font-weight: 600;
+            transition: all var(--transition);
+        }
+        .social-grid .social-link:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+        .social-grid .social-link i {
+            width: 24px;
+            height: 24px;
+        }
+        .social-grid .social-link .fb {
+            color: #1877F2;
+        }
+        .social-grid .social-link .wa {
+            color: #25D366;
+        }
+        .social-grid .social-link .comm {
+            color: #00E676;
+        }
 
- /* ================================================================
- FOOTER
- ================================================================ */
- .footer {
- background: var(--rwa-black-light);
- color: rgba(255, 255, 255, 0.7);
- padding: 64px 24px 24px;
- border-top: 1px solid rgba(255, 255, 255, 0.04);
- }
- .footer-grid {
- max-width: 1280px;
- margin: 0 auto;
- display: grid;
- grid-template-columns: 2fr 1fr 1fr 1.5fr;
- gap: 48px;
- padding-bottom: 48px;
- border-bottom: 1px solid rgba(255, 255, 255, 0.06);
- }
- .footer-brand .logo {
- height: 40px;
- width: auto;
- margin-bottom: 14px;
- }
- .footer-brand p {
- font-size: 0.95rem;
- line-height: 1.6;
- max-width: 300px;
- margin-bottom: 16px;
- }
- .footer-brand .mini-stats {
- display: flex;
- gap: 24px;
- flex-wrap: wrap;
- }
- .footer-brand .mini-stats span {
- display: flex;
- align-items: center;
- gap: 8px;
- font-size: 0.85rem;
- color: rgba(255, 255, 255, 0.5);
- }
- .footer-brand .mini-stats i {
- color: var(--rwa-red);
- width: 16px;
- height: 16px;
- }
+        /* ================================================================
+               FOOTER
+               ================================================================ */
+        .footer {
+            background: var(--rwa-black-light);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 64px 24px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .footer-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .footer-brand .logo {
+            height: 40px;
+            width: auto;
+            margin-bottom: 14px;
+        }
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            max-width: 300px;
+            margin-bottom: 16px;
+        }
+        .footer-brand .mini-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .footer-brand .mini-stats span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer-brand .mini-stats i {
+            color: var(--rwa-red);
+            width: 16px;
+            height: 16px;
+        }
 
- .footer-col h4 {
- color: var(--rwa-white);
- font-weight: 700;
- font-size: 1rem;
- margin-bottom: 16px;
- }
- .footer-col ul {
- list-style: none;
- }
- .footer-col ul li {
- margin-bottom: 10px;
- }
- .footer-col ul a {
- color: rgba(255, 255, 255, 0.6);
- transition: color 0.2s;
- font-size: 0.95rem;
- }
- .footer-col ul a:hover {
- color: var(--rwa-white);
- }
+        .footer-col h4 {
+            color: var(--rwa-white);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+        .footer-col ul a:hover {
+            color: var(--rwa-white);
+        }
 
- .footer-contact li {
- display: flex;
- align-items: center;
- gap: 12px;
- margin-bottom: 12px;
- font-size: 0.95rem;
- color: rgba(255, 255, 255, 0.6);
- }
- .footer-contact i {
- color: var(--rwa-red);
- width: 18px;
- height: 18px;
- flex-shrink: 0;
- }
- .footer-contact a {
- color: rgba(255, 255, 255, 0.6);
- transition: color 0.2s;
- }
- .footer-contact a:hover {
- color: var(--rwa-white);
- }
+        .footer-contact li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-contact i {
+            color: var(--rwa-red);
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s;
+        }
+        .footer-contact a:hover {
+            color: var(--rwa-white);
+        }
 
- .footer-socials {
- display: flex;
- flex-direction: column;
- gap: 10px;
- }
- .footer-socials .social-link {
- display: flex;
- align-items: center;
- gap: 12px;
- padding: 10px 16px;
- border-radius: var(--radius-sm);
- background: rgba(255, 255, 255, 0.03);
- border: 1px solid rgba(255, 255, 255, 0.05);
- color: rgba(255, 255, 255, 0.8);
- transition: all var(--transition);
- font-size: 0.95rem;
- }
- .footer-socials .social-link:hover {
- background: rgba(255, 255, 255, 0.06);
- transform: translateX(6px);
- }
- .footer-socials .social-link i {
- width: 20px;
- height: 20px;
- }
- .footer-socials .social-link .fb-icon {
- color: #1877F2;
- }
- .footer-socials .social-link .wa-icon {
- color: #25D366;
- }
- .footer-socials .social-link .comm-icon {
- color: #00E676;
- }
- .footer-socials .social-link .ig-icon {
- color: #E4405F;
- }
- .footer-socials .social-link .follower-badge {
- margin-left: auto;
- background: var(--rwa-red);
- color: var(--rwa-white);
- padding: 2px 14px;
- border-radius: var(--radius-full);
- font-size: 0.7rem;
- font-weight: 700;
- }
+        .footer-socials {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-socials .social-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+            transition: all var(--transition);
+            font-size: 0.95rem;
+        }
+        .footer-socials .social-link:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(6px);
+        }
+        .footer-socials .social-link i {
+            width: 20px;
+            height: 20px;
+        }
+        .footer-socials .social-link .fb-icon {
+            color: #1877F2;
+        }
+        .footer-socials .social-link .wa-icon {
+            color: #25D366;
+        }
+        .footer-socials .social-link .comm-icon {
+            color: #00E676;
+        }
+        .footer-socials .social-link .follower-badge {
+            margin-left: auto;
+            background: var(--rwa-red);
+            color: var(--rwa-white);
+            padding: 2px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
 
- .footer-bottom {
- max-width: 1280px;
- margin: 0 auto;
- padding-top: 24px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- flex-wrap: wrap;
- gap: 16px;
- font-size: 0.85rem;
- color: rgba(255, 255, 255, 0.3);
- }
- .footer-bottom-links {
- display: flex;
- gap: 28px;
- }
- .footer-bottom-links a {
- color: rgba(255, 255, 255, 0.3);
- transition: color 0.2s;
- }
- .footer-bottom-links a:hover {
- color: rgba(255, 255, 255, 0.6);
- }
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .footer-bottom-links {
+            display: flex;
+            gap: 28px;
+        }
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.3);
+            transition: color 0.2s;
+        }
+        .footer-bottom-links a:hover {
+            color: rgba(255, 255, 255, 0.6);
+        }
 
- /* ================================================================
- RESPONSIVE
- ================================================================ */
- @media (max-width: 1024px) {
- .footer-grid {
- grid-template-columns: 1fr 1fr;
- gap: 32px;
- }
- .contact-grid {
- grid-template-columns: 1fr;
- gap: 32px;
- }
- }
+        /* ================================================================
+               RESPONSIVE
+               ================================================================ */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
 
- @media (max-width: 768px) {
- .nav-menu {
- display: none;
- flex-direction: column;
- background: var(--rwa-white);
- position: absolute;
- top: 72px;
- left: 16px;
- right: 16px;
- padding: 28px;
- border-radius: var(--radius-md);
- box-shadow: var(--shadow-lg);
- gap: 18px;
- border: 1px solid var(--rwa-grey);
- }
- .nav-menu.active {
- display: flex;
- }
- .nav-toggle {
- display: block;
- }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                background: var(--rwa-white);
+                position: absolute;
+                top: 72px;
+                left: 16px;
+                right: 16px;
+                padding: 28px;
+                border-radius: var(--radius-md);
+                box-shadow: var(--shadow-lg);
+                gap: 18px;
+                border: 1px solid var(--rwa-grey);
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-toggle {
+                display: block;
+            }
 
- .contact-card {
- padding: 20px 24px;
- }
+            .contact-card {
+                padding: 20px 24px;
+            }
 
- .form-card {
- padding: 28px 24px;
- }
- .form-row {
- grid-template-columns: 1fr;
- }
+            .form-card {
+                padding: 28px 24px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
 
- .social-grid .social-link {
- width: 100%;
- justify-content: center;
- }
+            .social-grid .social-link {
+                width: 100%;
+                justify-content: center;
+            }
 
- .footer-grid {
- grid-template-columns: 1fr;
- text-align: center;
- }
- .footer-brand p {
- max-width: 100%;
- }
- .footer-brand .mini-stats {
- justify-content: center;
- }
- .footer-contact li {
- justify-content: center;
- }
- .footer-socials .social-link {
- justify-content: center;
- }
- .footer-socials .social-link .follower-badge {
- margin-left: 0;
- }
- .footer-bottom {
- flex-direction: column;
- text-align: center;
- }
- .footer-bottom-links {
- justify-content: center;
- }
- }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand p {
+                max-width: 100%;
+            }
+            .footer-brand .mini-stats {
+                justify-content: center;
+            }
+            .footer-contact li {
+                justify-content: center;
+            }
+            .footer-socials .social-link {
+                justify-content: center;
+            }
+            .footer-socials .social-link .follower-badge {
+                margin-left: 0;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
 
- @media (max-width: 480px) {
- .btn {
- padding: 14px 24px;
- font-size: 0.95rem;
- width: 100%;
- justify-content: center;
- }
- .btn-lg {
- padding: 14px 24px;
- }
- .contact-card {
- flex-direction: column;
- text-align: center;
- }
- .form-card {
- padding: 20px;
- }
- }
+        @media (max-width: 480px) {
+            .btn {
+                padding: 14px 24px;
+                font-size: 0.95rem;
+                width: 100%;
+                justify-content: center;
+            }
+            .btn-lg {
+                padding: 14px 24px;
+            }
+            .contact-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .form-card {
+                padding: 20px;
+            }
+        }
 
- /* ================================================================
- ANIMATIONS
- ================================================================ */
- .fade-up {
- opacity: 0;
- transform: translateY(40px);
- transition: opacity 0.8s ease, transform 0.8s ease;
- }
- .fade-up.visible {
- opacity: 1;
- transform: translateY(0);
- }
+        /* ================================================================
+               ANIMATIONS
+               ================================================================ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
- @keyframes pulse-ring {
- 0% {
- box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.3);
- }
- 70% {
- box-shadow: 0 0 0 20px rgba(227, 30, 36, 0);
- }
- 100% {
- box-shadow: 0 0 0 0 rgba(227, 30, 36, 0);
- }
- }
- .pulse-ring {
- animation: pulse-ring 2s infinite;
- }
- </style>
+        @keyframes pulse-ring {
+            0% {
+                box-shadow: 0 0 0 0 rgba(227, 30, 36, 0.3);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(227, 30, 36, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(227, 30, 36, 0);
+            }
+        }
+        .pulse-ring {
+            animation: pulse-ring 2s infinite;
+        }
+    </style>
 </head>
 
 <body>
 
- <!-- ================================================================
- NAVBAR
- ================================================================ -->
- <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
- <div class="nav-container">
- <a href="index.html" class="nav-logo" aria-label="Road Wise Academy homepage">
- <img src="assets/images/logo/logo.png" alt="Road Wise Academy">
- </a>
- <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
- <i data-lucide="menu"></i>
- </button>
- <ul class="nav-menu" id="navMenu">
- <li><a href="index.html">Home</a></li>
- <li><a href="about.html">About</a></li>
- <li><a href="demo-test.html">Demo Test</a></li>
- <li><a href="driving-schools.html">Schools</a></li>
- <li><a href="theory-test-guide.html">Theory Guide</a></li>
- <li><a href="contact.html" aria-current="page">Contact</a></li>
- <li><a href="student-zone.html" class="nav-cta">Student Zone</a></li>
- </ul>
- </div>
- </nav>
+    <!-- ================================================================
+    NAVBAR
+    ================================================================ -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Road Wise Academy homepage">
+                <img src="assets/images/logo/logo.png" alt="Road Wise Academy">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="demo-test.html">Demo Test</a></li>
+                <li><a href="driving-schools.html">Schools</a></li>
+                <li><a href="theory-test-guide.html">Theory Guide</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="student-zone.html" class="nav-cta">Student Zone</a></li>
+            </ul>
+        </div>
+    </nav>
 
- <!-- ================================================================
- PAGE HERO
- ================================================================ -->
- <section class="page-hero" aria-labelledby="page-title">
- <div class="orb orb-1"></div>
- <div class="orb orb-2"></div>
- <div class="container">
- <span class="badge badge-center">
- <i data-lucide="message-circle"></i> Get in Touch
- </span>
- <h1 class="heading-xl" id="page-title">
- Let's <span class="highlight">Connect</span>
- </h1>
- <p class="text-body mx-auto">
- Have questions about your theory test? Want to partner with us?
- Reach out through any of the channels below €” we're here to help.
- </p>
- </div>
- </section>
+    <!-- ================================================================
+    PAGE HERO
+    ================================================================ -->
+    <section class="page-hero" aria-labelledby="page-title">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="container">
+            <span class="badge badge-center">
+                <i data-lucide="message-circle"></i> Get in Touch
+            </span>
+            <h1 class="heading-xl" id="page-title">
+                Let's <span class="highlight">Connect</span>
+            </h1>
+            <p class="text-body mx-auto">
+                Have questions about your theory test? Want to partner with us?
+                Reach out through any of the channels below — we're here to help.
+            </p>
+        </div>
+    </section>
 
- <!-- ================================================================
- CONTENT
- ================================================================ -->
- <section class="contact-section">
- <div class="container">
+    <!-- ================================================================
+    CONTENT
+    ================================================================ -->
+    <section class="contact-section">
+        <div class="container">
 
- <div class="contact-grid">
+            <div class="contact-grid">
 
- <!-- LEFT: Contact Methods -->
- <div class="contact-methods">
+                <!-- LEFT: Contact Methods -->
+                <div class="contact-methods">
 
- <!-- WhatsApp -->
- <div class="contact-card fade-up">
- <div class="icon-wrap"><i data-lucide="phone"></i></div>
- <div class="info">
- <h4>WhatsApp</h4>
- <p>Fastest way to reach us</p>
- <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank">Chat with us †’</a>
- </div>
- </div>
+                    <!-- WhatsApp -->
+                    <div class="contact-card fade-up">
+                        <div class="icon-wrap"><i data-lucide="phone"></i></div>
+                        <div class="info">
+                            <h4>WhatsApp</h4>
+                            <p>Fastest way to reach us</p>
+                            <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank">Chat with us →</a>
+                        </div>
+                    </div>
 
- <!-- WhatsApp Community -->
- <div class="contact-card fade-up">
- <div class="icon-wrap"><i data-lucide="users"></i></div>
- <div class="info">
- <h4>WhatsApp Community</h4>
- <p>Join thousands of learners</p>
- <a href="#" target="_blank">Join the community †’</a>
- </div>
- </div>
+                    <!-- WhatsApp Community -->
+                    <div class="contact-card fade-up">
+                        <div class="icon-wrap"><i data-lucide="users"></i></div>
+                        <div class="info">
+                            <h4>WhatsApp Community</h4>
+                            <p>Join thousands of learners</p>
+                            <a href="#" target="_blank">Join the community →</a>
+                        </div>
+                    </div>
 
- <!-- Email -->
- <div class="contact-card fade-up">
- <div class="icon-wrap"><i data-lucide="mail"></i></div>
- <div class="info">
- <h4>Email</h4>
- <p>For general enquiries</p>
- <a href="mailto:info@roadwiseacademy.co.bw">info@roadwiseacademy.co.bw</a>
- </div>
- </div>
+                    <!-- Email -->
+                    <div class="contact-card fade-up">
+                        <div class="icon-wrap"><i data-lucide="mail"></i></div>
+                        <div class="info">
+                            <h4>Email</h4>
+                            <p>For general enquiries</p>
+                            <a href="mailto:info@roadwiseacademy.co.bw">info@roadwiseacademy.co.bw</a>
+                        </div>
+                    </div>
 
- <!-- Location -->
- <div class="contact-card fade-up">
- <div class="icon-wrap"><i data-lucide="map-pin"></i></div>
- <div class="info">
- <h4>Location</h4>
- <p>Gaborone, Botswana</p>
- <span style="color:var(--rwa-grey-medium);font-size:0.9rem;">We operate digitally across Botswana</span>
- </div>
- </div>
+                    <!-- Location -->
+                    <div class="contact-card fade-up">
+                        <div class="icon-wrap"><i data-lucide="map-pin"></i></div>
+                        <div class="info">
+                            <h4>Location</h4>
+                            <p>Gaborone, Botswana</p>
+                            <span style="color:var(--rwa-grey-medium);font-size:0.9rem;">We operate digitally across Botswana</span>
+                        </div>
+                    </div>
 
- </div>
+                </div>
 
- <!-- RIGHT: Enquiry Form -->
- <div class="form-card fade-up">
- <h3>ðŸ“© Send an Enquiry</h3>
- <p>Fill out the form below and we'll get back to you via WhatsApp.</p>
+                <!-- RIGHT: Enquiry Form -->
+                <div class="form-card fade-up">
+                    <h3>Send an Enquiry</h3>
+                    <p>Fill out the form below and we'll get back to you via WhatsApp.</p>
 
- <form id="contactForm" novalidate>
- <div class="form-row">
- <div class="form-group">
- <label for="fullName">Full Name *</label>
- <input type="text" id="fullName" placeholder="Your full name" required>
- </div>
- <div class="form-group">
- <label for="email">Email Address *</label>
- <input type="email" id="email" placeholder="your@email.com" required>
- </div>
- </div>
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
 
- <div class="form-group">
- <label for="phone">Phone Number</label>
- <input type="tel" id="phone" placeholder="+267 XX XXX XXX">
- </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+267 XX XXX XXX">
+                        </div>
 
- <div class="form-group">
- <label for="enquiryType">Enquiry Type</label>
- <select id="enquiryType">
- <option value="General Question">General Question</option>
- <option value="Partnership Enquiry">Partnership Enquiry</option>
- <option value="Student Support">Student Support</option>
- <option value="Feedback">Feedback</option>
- <option value="Other">Other</option>
- </select>
- </div>
+                        <div class="form-group">
+                            <label for="enquiryType">Enquiry Type</label>
+                            <select id="enquiryType">
+                                <option value="General Question">General Question</option>
+                                <option value="Partnership Enquiry">Partnership Enquiry</option>
+                                <option value="Student Support">Student Support</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
 
- <div class="form-group">
- <label for="message">Message *</label>
- <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
- </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+                        </div>
 
- <button type="submit" class="btn btn-primary" style="width:100%;">
- <i data-lucide="send"></i> Send via WhatsApp
- </button>
- </form>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">
+                            <i data-lucide="send"></i> Send via WhatsApp
+                        </button>
+                    </form>
 
- <div class="form-success" id="formSuccess">
- <i data-lucide="check-circle" style="width:24px;height:24px;display:inline-block;vertical-align:middle;"></i>
- Thank you! Your message has been prepared. WhatsApp will open so you can send it.
- </div>
+                    <div class="form-success" id="formSuccess">
+                        <i data-lucide="check-circle" style="width:24px;height:24px;display:inline-block;vertical-align:middle;"></i>
+                        Thank you! Your message has been prepared. WhatsApp will open so you can send it.
+                    </div>
 
- <p style="margin-top:16px;font-size:0.85rem;color:var(--rwa-grey-medium);text-align:center;">
- <i data-lucide="phone" style="width:14px;height:14px;display:inline;vertical-align:middle;"></i>
- Prefer to chat? WhatsApp us directly at <strong style="color:var(--rwa-red);">+267 75 911 795</strong>
- </p>
- </div>
+                    <p style="margin-top:16px;font-size:0.85rem;color:var(--rwa-grey-medium);text-align:center;">
+                        <i data-lucide="phone" style="width:14px;height:14px;display:inline;vertical-align:middle;"></i>
+                        Prefer to chat? WhatsApp us directly at <strong style="color:var(--rwa-red);">+267 75 911 795</strong>
+                    </p>
+                </div>
 
- </div>
+            </div>
 
- <!-- Social Links -->
- <div class="social-section fade-up">
- <h3>Connect with us on social media</h3>
- <div class="social-grid">
- <a href="https://www.facebook.com/profile.php?id=61563870249694" target="_blank" rel="noopener" class="social-link">
- <i data-lucide="facebook" class="fb"></i> Facebook
- </a>
- <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="social-link">
- <i data-lucide="phone" class="wa"></i> WhatsApp
- </a>
- <a href="#" target="_blank" class="social-link">
- <i data-lucide="users" class="comm"></i> WhatsApp Community
- </a>
- <a href="#" target="_blank" rel="noopener" class="social-link">
- </a>
- <a href="#" target="_blank" rel="noopener" class="social-link">
- </a>
- </div>
- </div>
+            <!-- Social Links -->
+            <div class="social-section fade-up">
+                <h3>Connect with us on social media</h3>
+                <div class="social-grid">
+                    <a href="https://www.facebook.com/profile.php?id=61563870249694" target="_blank" rel="noopener" class="social-link">
+                        <i data-lucide="facebook" class="fb"></i> Facebook
+                    </a>
+                    <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="social-link">
+                        <i data-lucide="phone" class="wa"></i> WhatsApp
+                    </a>
+                    <a href="#" target="_blank" class="social-link">
+                        <i data-lucide="users" class="comm"></i> WhatsApp Community
+                    </a>
+                </div>
+            </div>
 
- </div>
- </section>
+        </div>
+    </section>
 
- <!-- ================================================================
- FOOTER
- ================================================================ -->
- <footer class="footer" role="contentinfo">
- <div class="footer-grid">
- <div class="footer-brand">
- <img src="assets/images/logo/logo.png" alt="Road Wise Academy" class="logo">
- <p>Botswana's digital driving theory education platform. Study smart. Pass with confidence.</p>
- <div class="mini-stats">
- <span><i data-lucide="users"></i> 5K+ Followers</span>
- <span><i data-lucide="school"></i> 5 Partner Schools</span>
- </div>
- </div>
+    <!-- ================================================================
+    FOOTER
+    ================================================================ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo/logo.png" alt="Road Wise Academy" class="logo">
+                <p>Botswana's digital driving theory education platform. Study smart. Pass with confidence.</p>
+                <div class="mini-stats">
+                    <span><i data-lucide="users"></i> 5K+ Followers</span>
+                    <span><i data-lucide="school"></i> 5 Partner Schools</span>
+                </div>
+            </div>
 
- <div class="footer-col">
- <h4>Quick Links</h4>
- <ul>
- <li><a href="about.html">About Us</a></li>
- <li><a href="demo-test.html">Demo Test</a></li>
- <li><a href="driving-schools.html">Driving Schools</a></li>
- <li><a href="theory-test-guide.html">Theory Test Guide</a></li>
- </ul>
- </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="demo-test.html">Demo Test</a></li>
+                    <li><a href="driving-schools.html">Driving Schools</a></li>
+                    <li><a href="theory-test-guide.html">Theory Test Guide</a></li>
+                </ul>
+            </div>
 
- <div class="footer-col">
- <h4>Get in Touch</h4>
- <ul class="footer-contact">
- <li><i data-lucide="phone"></i> <a href="tel:+26775911795">+267 75 911 795</a></li>
- <li><i data-lucide="mail"></i> <a href="mailto:info@roadwiseacademy.co.bw">info@roadwiseacademy.co.bw</a></li>
- <li><i data-lucide="map-pin"></i> Gaborone, Botswana</li>
- </ul>
- </div>
+            <div class="footer-col">
+                <h4>Get in Touch</h4>
+                <ul class="footer-contact">
+                    <li><i data-lucide="phone"></i> <a href="tel:+26775911795">+267 75 911 795</a></li>
+                    <li><i data-lucide="mail"></i> <a href="mailto:info@roadwiseacademy.co.bw">info@roadwiseacademy.co.bw</a></li>
+                    <li><i data-lucide="map-pin"></i> Gaborone, Botswana</li>
+                </ul>
+            </div>
 
- <div class="footer-col">
- <h4>Join Our Community</h4>
- <div class="footer-socials">
- <a href="https://www.facebook.com/profile.php?id=61563870249694" target="_blank" rel="noopener" class="social-link">
- <i data-lucide="facebook" class="fb-icon"></i> Facebook
- <span class="follower-badge">5K+</span>
- </a>
- <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="social-link">
- <i data-lucide="phone" class="wa-icon"></i> WhatsApp
- </a>
- <a href="#" class="social-link">
- <i data-lucide="users" class="comm-icon"></i> WhatsApp Community
- </a>
- <a href="#" class="social-link">
- </a>
- </div>
- </div>
- </div>
+            <div class="footer-col">
+                <h4>Join Our Community</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61563870249694" target="_blank" rel="noopener" class="social-link">
+                        <i data-lucide="facebook" class="fb-icon"></i> Facebook
+                        <span class="follower-badge">5K+</span>
+                    </a>
+                    <a href="https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="social-link">
+                        <i data-lucide="phone" class="wa-icon"></i> WhatsApp
+                    </a>
+                    <a href="#" class="social-link">
+                        <i data-lucide="users" class="comm-icon"></i> WhatsApp Community
+                    </a>
+                </div>
+            </div>
+        </div>
 
- <div class="footer-bottom">
- <p>&copy; 2026 Road Wise Academy. All rights reserved.</p>
- <div class="footer-bottom-links">
- <a href="#">Privacy Policy</a>
- <a href="#">Terms &amp; Conditions</a>
- </div>
- </div>
- </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Road Wise Academy. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </footer>
 
- <!-- ================================================================
- JAVASCRIPT €” UPDATED WITH WHATSAPP REDIRECT
- ================================================================ -->
- <script>
- (function() {
- 'use strict';
+    <!-- ================================================================
+    JAVASCRIPT — UPDATED WITH WHATSAPP REDIRECT
+    ================================================================ -->
+    <script>
+        (function() {
+            'use strict';
 
- // ============================================================
- // 1. LUCIDE ICONS
- // ============================================================
- if (typeof lucide !== 'undefined') {
- lucide.createIcons();
- }
+            // ============================================================
+            // 1. LUCIDE ICONS
+            // ============================================================
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
 
- // ============================================================
- // 2. NAVBAR
- // ============================================================
- const navbar = document.getElementById('navbar');
- window.addEventListener('scroll', function() {
- const scrollY = window.pageYOffset || document.documentElement.scrollTop;
- navbar.classList.toggle('scrolled', scrollY > 50);
- }, { passive: true });
+            // ============================================================
+            // 2. NAVBAR
+            // ============================================================
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', function() {
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+                navbar.classList.toggle('scrolled', scrollY > 50);
+            }, { passive: true });
 
- // ============================================================
- // 3. MOBILE NAV
- // ============================================================
- const toggle = document.getElementById('navToggle');
- const menu = document.getElementById('navMenu');
+            // ============================================================
+            // 3. MOBILE NAV
+            // ============================================================
+            const toggle = document.getElementById('navToggle');
+            const menu = document.getElementById('navMenu');
 
- if (toggle && menu) {
- const toggleMenu = function() {
- const isOpen = menu.classList.toggle('active');
- const icon = toggle.querySelector('i');
- if (icon) {
- icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
- if (typeof lucide !== 'undefined') lucide.createIcons();
- }
- toggle.setAttribute('aria-expanded', isOpen);
- };
+            if (toggle && menu) {
+                const toggleMenu = function() {
+                    const isOpen = menu.classList.toggle('active');
+                    const icon = toggle.querySelector('i');
+                    if (icon) {
+                        icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    }
+                    toggle.setAttribute('aria-expanded', isOpen);
+                };
 
- toggle.addEventListener('click', toggleMenu);
+                toggle.addEventListener('click', toggleMenu);
 
- menu.querySelectorAll('a').forEach(function(link) {
- link.addEventListener('click', function() {
- menu.classList.remove('active');
- const icon = toggle.querySelector('i');
- if (icon) {
- icon.setAttribute('data-lucide', 'menu');
- if (typeof lucide !== 'undefined') lucide.createIcons();
- }
- toggle.setAttribute('aria-expanded', 'false');
- });
- });
- }
+                menu.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        menu.classList.remove('active');
+                        const icon = toggle.querySelector('i');
+                        if (icon) {
+                            icon.setAttribute('data-lucide', 'menu');
+                            if (typeof lucide !== 'undefined') lucide.createIcons();
+                        }
+                        toggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
 
- // ============================================================
- // 4. INTERSECTION OBSERVER €” FADE-UP ANIMATIONS
- // ============================================================
- const fadeElements = document.querySelectorAll('.fade-up');
+            // ============================================================
+            // 4. INTERSECTION OBSERVER — FADE-UP ANIMATIONS
+            // ============================================================
+            const fadeElements = document.querySelectorAll('.fade-up');
 
- if ('IntersectionObserver' in window) {
- const observer = new IntersectionObserver(function(entries) {
- entries.forEach(function(entry) {
- if (entry.isIntersecting) {
- entry.target.classList.add('visible');
- observer.unobserve(entry.target);
- }
- });
- }, {
- threshold: 0.15,
- rootMargin: '0px 0px -40px 0px'
- });
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -40px 0px'
+                });
 
- fadeElements.forEach(function(el) {
- observer.observe(el);
- });
- } else {
- fadeElements.forEach(function(el) {
- el.classList.add('visible');
- });
- }
+                fadeElements.forEach(function(el) {
+                    observer.observe(el);
+                });
+            } else {
+                fadeElements.forEach(function(el) {
+                    el.classList.add('visible');
+                });
+            }
 
- // ============================================================
- // 5. CONTACT FORM €” WHATSAPP REDIRECT (UPDATED)
- // ============================================================
- const form = document.getElementById('contactForm');
- const successEl = document.getElementById('formSuccess');
+            // ============================================================
+            // 5. CONTACT FORM — WHATSAPP REDIRECT
+            // ============================================================
+            const form = document.getElementById('contactForm');
+            const successEl = document.getElementById('formSuccess');
 
- // Your WhatsApp link
- const WHATSAPP_LINK = 'https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0';
+            // Your WhatsApp API link
+            const WHATSAPP_LINK = 'https://api.whatsapp.com/message/7YHRR2EPAPEWA1?autoload=1&app_absent=0';
 
- if (form) {
- form.addEventListener('submit', function(e) {
- e.preventDefault();
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
 
- // Get form values
- const name = document.getElementById('fullName').value.trim();
- const email = document.getElementById('email').value.trim();
- const phone = document.getElementById('phone').value.trim();
- const enquiryType = document.getElementById('enquiryType').value;
- const message = document.getElementById('message').value.trim();
+                    // Get form values
+                    const name = document.getElementById('fullName').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const enquiryType = document.getElementById('enquiryType').value;
+                    const message = document.getElementById('message').value.trim();
 
- // Validate
- if (!name || !email || !message) {
- alert('Please fill in all required fields.');
- return;
- }
+                    // Validate
+                    if (!name || !email || !message) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
 
- if (!email.includes('@') || !email.includes('.')) {
- alert('Please enter a valid email address.');
- return;
- }
+                    if (!email.includes('@') || !email.includes('.')) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
 
- // Build WhatsApp message
- const whatsappMessage =
- `Hello Road Wise Academy!%0A%0A` +
- `ðŸ“ Enquiry Type: ${enquiryType}%0A` +
- `ðŸ‘¤ Name: ${name}%0A` +
- `ðŸ“§ Email: ${email}%0A` +
- `ðŸ“± Phone: ${phone || 'Not provided'}%0A%0A` +
- `ðŸ’¬ Message:%0A${message}`;
+                    // Build WhatsApp message
+                    const whatsappMessage =
+                        `Hello Road Wise Academy!%0A%0A` +
+                        `Enquiry Type: ${enquiryType}%0A` +
+                        `Name: ${name}%0A` +
+                        `Email: ${email}%0A` +
+                        `Phone: ${phone || 'Not provided'}%0A%0A` +
+                        `Message:%0A${message}`;
 
- // Open WhatsApp with pre-filled message
- window.open(`${WHATSAPP_LINK}&text=${whatsappMessage}`, '_blank');
+                    // Open WhatsApp with pre-filled message
+                    window.open(`${WHATSAPP_LINK}&text=${whatsappMessage}`, '_blank');
 
- // Show success message
- successEl.classList.add('active');
- form.reset();
+                    // Show success message
+                    successEl.classList.add('active');
+                    form.reset();
 
- // Hide success after 6 seconds
- setTimeout(function() {
- successEl.classList.remove('active');
- }, 6000);
+                    // Hide success after 6 seconds
+                    setTimeout(function() {
+                        successEl.classList.remove('active');
+                    }, 6000);
 
- // Scroll to success message
- successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
- });
- }
+                    // Scroll to success message
+                    successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
 
- console.log('œ… Road Wise Academy €” Contact page fully loaded');
+            console.log('Road Wise Academy — Contact page loaded');
 
- })();
- </script>
+        })();
+    </script>
 
 </body>
 </html>
-
-
-
-
-
