@@ -825,6 +825,42 @@
         filter: none !important;
     }
 }
+
+/* === FIX MOBILE NAVBAR (appended) === */
+@media (max-width: 768px) {
+    /* Make hamburger icon visible */
+    .nav-toggle {
+        color: #111111 !important;
+    }
+
+    /* Make dropdown menu dark with white text */
+    .nav-menu {
+        background: #0A0A0A !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3) !important;
+    }
+    .nav-menu a {
+        color: #FFFFFF !important;
+    }
+    .nav-menu a:hover {
+        color: #E31E24 !important;
+    }
+
+    /* Keep logo original color */
+    .navbar .nav-logo img {
+        filter: none !important;
+    }
+
+    /* Make sure top bar background stays as it was (not black) */
+    .navbar {
+        background: transparent !important;
+    }
+    .navbar.scrolled {
+        background: rgba(255,255,255,0.95) !important;
+    }
+}
 </style>
 </head>
 
@@ -1206,6 +1242,7 @@
 
 </body>
 </html>
+
 
 
 
