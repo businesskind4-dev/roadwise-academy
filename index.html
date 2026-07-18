@@ -2253,6 +2253,655 @@
  });
  })();
  </script>
+<!-- ============================================================
+     IMPROVED AI SITE ASSISTANT – Road Wise Academy
+     Paste this before </body> in every HTML file
+     ============================================================ -->
 
+<div class="rwa-ai-assistant">
+  <!-- Floating trigger button -->
+  <button class="rwa-ai-trigger" id="rwaAiTrigger" aria-label="Open AI Assistant">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+  </button>
+
+  <!-- Chat window -->
+  <div class="rwa-ai-window" id="rwaAiWindow">
+    <div class="rwa-ai-header">
+      <span>🤖 Ask RWA</span>
+      <div class="rwa-ai-header-actions">
+        <button class="rwa-ai-reset" id="rwaAiReset" title="Start Over">↺</button>
+        <button class="rwa-ai-close" id="rwaAiClose">✕</button>
+      </div>
+    </div>
+
+    <div class="rwa-ai-messages" id="rwaAiMessages">
+      <div class="rwa-ai-message rwa-ai-bot">
+        👋 Hi! I'm your Road Wise Academy assistant.<br>
+        Ask me anything about the website!
+      </div>
+    </div>
+
+    <!-- Quick reply suggestions -->
+    <div class="rwa-ai-suggestions" id="rwaAiSuggestions">
+      <button class="rwa-ai-suggestion" data-question="How do I access the Student Zone?">🎓 Student Zone</button>
+      <button class="rwa-ai-suggestion" data-question="How much does it cost?">💰 Pricing</button>
+      <button class="rwa-ai-suggestion" data-question="How do I find a driving school?">🚗 Driving Schools</button>
+      <button class="rwa-ai-suggestion" data-question="What's the pass rate?">📊 Pass Rate</button>
+    </div>
+
+    <div class="rwa-ai-input">
+      <input type="text" id="rwaAiInput" placeholder="Ask a question..." autocomplete="off">
+      <button id="rwaAiSend">Send</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ===== RWA AI ASSISTANT STYLES ===== */
+.rwa-ai-assistant {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Trigger button */
+.rwa-ai-trigger {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #E31E24;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(227, 30, 36, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rwa-ai-trigger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 32px rgba(227, 30, 36, 0.5);
+}
+.rwa-ai-trigger svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Chat window */
+.rwa-ai-window {
+  position: absolute;
+  bottom: 72px;
+  right: 0;
+  width: 380px;
+  max-width: 92vw;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #EEF2F6;
+}
+.rwa-ai-window.open {
+  display: flex;
+}
+
+.rwa-ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #0A0A0A;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.rwa-ai-header span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rwa-ai-header-actions {
+  display: flex;
+  gap: 8px;
+}
+.rwa-ai-reset,
+.rwa-ai-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+.rwa-ai-reset:hover,
+.rwa-ai-close:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.rwa-ai-messages {
+  padding: 14px 16px;
+  height: 280px;
+  overflow-y: auto;
+  background: #F8F9FC;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.rwa-ai-message {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  animation: rwaFadeIn 0.3s ease;
+}
+.rwa-ai-bot {
+  background: #fff;
+  color: #0A0A0A;
+  align-self: flex-start;
+  border: 1px solid #EEF2F6;
+}
+.rwa-ai-user {
+  background: #E31E24;
+  color: #fff;
+  align-self: flex-end;
+}
+.rwa-ai-bot a {
+  color: #E31E24;
+  text-decoration: underline;
+}
+.rwa-ai-bot a:hover {
+  color: #B8181D;
+}
+@keyframes rwaFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing indicator */
+.rwa-ai-typing {
+  display: inline-block;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #EEF2F6;
+  font-size: 0.9rem;
+  color: #0A0A0A;
+  align-self: flex-start;
+}
+.rwa-ai-typing span {
+  display: inline-block;
+  animation: rwaTypingDots 1.4s steps(4) infinite;
+}
+@keyframes rwaTypingDots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+/* Quick reply suggestions */
+.rwa-ai-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 16px 4px;
+  background: #fff;
+  border-top: 1px solid #EEF2F6;
+  flex-shrink: 0;
+}
+.rwa-ai-suggestion {
+  background: #F0F2F5;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0A0A0A;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  font-family: 'Inter', sans-serif;
+}
+.rwa-ai-suggestion:hover {
+  background: #E31E24;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.rwa-ai-input {
+  display: flex;
+  padding: 8px 12px 12px;
+  gap: 10px;
+  border-top: 1px solid #EEF2F6;
+  background: #fff;
+  flex-shrink: 0;
+}
+.rwa-ai-input input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #EEF2F6;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.rwa-ai-input input:focus {
+  border-color: #E31E24;
+}
+.rwa-ai-input button {
+  padding: 8px 20px;
+  background: #E31E24;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.rwa-ai-input button:hover {
+  background: #B8181D;
+}
+
+/* Feedback buttons */
+.rwa-ai-feedback {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #8A8F98;
+}
+.rwa-ai-feedback button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  color: #8A8F98;
+}
+.rwa-ai-feedback button:hover {
+  background: #E5E7EB;
+  color: #0A0A0A;
+}
+.rwa-ai-feedback button.active {
+  color: #E31E24;
+  background: rgba(227,30,36,0.08);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .rwa-ai-window {
+    width: 100vw;
+    max-width: 100vw;
+    bottom: 0;
+    right: 0;
+    border-radius: 16px 16px 0 0;
+    height: 80vh;
+  }
+  .rwa-ai-messages {
+    height: calc(80vh - 180px);
+  }
+  .rwa-ai-trigger {
+    width: 48px;
+    height: 48px;
+  }
+  .rwa-ai-trigger svg {
+    width: 24px;
+    height: 24px;
+  }
+  .rwa-ai-suggestions {
+    gap: 6px;
+    padding: 6px 12px;
+  }
+  .rwa-ai-suggestion {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+  }
+}
+</style>
+
+<script>
+// ===== RWA AI ASSISTANT – IMPROVED VERSION =====
+(function() {
+  'use strict';
+
+  // ----- KNOWLEDGE BASE -----
+  const rwaFAQ = [
+    {
+      keywords: ["what is road wise", "road wise academy", "about rwa", "who are you", "what do you do"],
+      answer: "Road Wise Academy is Botswana's digital driving theory education platform. We help learners pass their Matshwao (Class B) theory test through interactive revision, mock exams, and instant feedback."
+    },
+    {
+      keywords: ["student zone", "access student zone", "login", "sign in", "enroll", "registration"],
+      answer: "The Student Zone is our private learning platform. To get access, contact Road Wise Academy via WhatsApp with your full name, complete payment of P45, and you'll be registered, receive a receipt, and be added to the paid community group. Then you'll get access to the Student Zone."
+    },
+    {
+      keywords: ["driving school", "find school", "partner schools", "practical lessons"],
+      answer: "Visit our <a href='driving-schools.html'>Driving Schools</a> page to see verified partner schools across Botswana. They offer practical lessons, theory test assistance, and vehicle hire."
+    },
+    {
+      keywords: ["demo test", "free demo", "try before buy", "sample test"],
+      answer: "Yes! You can try our Free Demo Test. It has 10 realistic questions with instant feedback. Go to the <a href='demo-test.html'>Demo Test</a> page to start."
+    },
+    {
+      keywords: ["pass rate", "success rate", "how many pass"],
+      answer: "Our learners have a 92% pass rate. We're proud to help thousands of Batswana pass their theory test."
+    },
+    {
+      keywords: ["licence class", "which licence", "b class", "c1", "ec", "classes"],
+      answer: "We cover multiple licence classes: B (Light Motor Vehicle), C1 (Light Goods), C (Heavy Goods), EC1 (Articulated Light), and EC (Articulated Heavy)."
+    },
+    {
+      keywords: ["price", "cost", "payment", "how much", "fee", "p45", "pay", "money"],
+      answer: "The online revision material package is <strong>P45</strong>. This gives you full access to the Student Zone, including 600+ questions, mock exams, instant feedback, and WhatsApp support. Contact us via <a href='https://wa.me/message/7YHRR2EPAPEWA1' target='_blank'>WhatsApp</a> to get started."
+    },
+    {
+      keywords: ["whatsapp", "contact", "phone", "email", "reach us", "call"],
+      answer: "You can reach us on <a href='https://wa.me/message/7YHRR2EPAPEWA1' target='_blank'>WhatsApp at +267 75 911 795</a> or email <a href='mailto:info@roadwiseacademy.co.bw'>info@roadwiseacademy.co.bw</a>. We're here to help!"
+    },
+    {
+      keywords: ["theory test", "book test", "booking", "drts"],
+      answer: "We recommend preparing with Road Wise Academy first. Then you can book your theory test through DRTS or get assistance from our <a href='driving-schools.html'>partner schools</a>."
+    },
+    {
+      keywords: ["requirements", "what do i need", "omang", "id", "documents"],
+      answer: "You need a valid Omang, the theory test fee, and a confirmed booking date. Arrive 30 minutes early on test day with your Omang and receipt."
+    },
+    {
+      keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"],
+      answer: "👋 Hello! Welcome to Road Wise Academy. How can I help you today? Try asking about the <strong>Student Zone</strong>, <strong>pricing</strong>, or <strong>driving schools</strong>."
+    },
+    {
+      keywords: ["thank", "thanks", "appreciate"],
+      answer: "You're welcome! 😊 Is there anything else I can help you with?"
+    },
+    {
+      keywords: ["bye", "goodbye", "see you", "later"],
+      answer: "Goodbye! Feel free to come back if you have more questions. Safe driving! 🚗"
+    }
+  ];
+
+  const FALLBACK_ANSWER = "I'm not sure about that. Here's how to get help:<br><br>📱 <a href='https://wa.me/message/7YHRR2EPAPEWA1' target='_blank'>WhatsApp: +267 75 911 795</a><br>📧 <a href='mailto:info@roadwiseacademy.co.bw'>Email: info@roadwiseacademy.co.bw</a><br><br>Or visit our <a href='contact.html'>Contact</a> page for more options.";
+
+  // ----- DOM ELEMENTS -----
+  const trigger = document.getElementById('rwaAiTrigger');
+  const windowEl = document.getElementById('rwaAiWindow');
+  const closeBtn = document.getElementById('rwaAiClose');
+  const resetBtn = document.getElementById('rwaAiReset');
+  const messages = document.getElementById('rwaAiMessages');
+  const input = document.getElementById('rwaAiInput');
+  const sendBtn = document.getElementById('rwaAiSend');
+  const suggestions = document.querySelectorAll('.rwa-ai-suggestion');
+
+  // ----- STATE -----
+  let conversation = [];
+  let messageCount = 0;
+
+  // ----- FUNCTIONS -----
+
+  // Find best answer
+  function findAnswer(question) {
+    const q = question.toLowerCase().trim();
+    if (!q) return "Please ask a question.";
+
+    let bestMatch = null;
+    let bestScore = 0;
+
+    for (const item of rwaFAQ) {
+      let score = 0;
+      for (const keyword of item.keywords) {
+        if (q.includes(keyword)) {
+          score += 1;
+        }
+      }
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = item;
+      }
+    }
+
+    if (bestMatch && bestScore > 0) {
+      return bestMatch.answer;
+    }
+
+    // fallback: check partial word matches
+    const words = q.split(' ');
+    for (const item of rwaFAQ) {
+      for (const keyword of item.keywords) {
+        for (const word of words) {
+          if (word.length > 3 && keyword.includes(word)) {
+            return item.answer;
+          }
+        }
+      }
+    }
+
+    return FALLBACK_ANSWER;
+  }
+
+  // Add a message to the chat
+  function addMessage(text, sender) {
+    const div = document.createElement('div');
+    div.className = `rwa-ai-message rwa-ai-${sender}`;
+    div.innerHTML = text; // allow HTML for links
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    messageCount++;
+
+    // Store in conversation
+    conversation.push({ sender, text });
+    return div;
+  }
+
+  // Show typing indicator
+  function showTyping() {
+    const div = document.createElement('div');
+    div.className = 'rwa-ai-typing';
+    div.id = 'rwaAiTyping';
+    div.innerHTML = '<span>...</span>';
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function removeTyping() {
+    const typing = document.getElementById('rwaAiTyping');
+    if (typing) typing.remove();
+  }
+
+  // Add feedback buttons to a bot message
+  function addFeedback(messageId, messageText) {
+    const feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'rwa-ai-feedback';
+    feedbackDiv.dataset.messageId = messageId;
+
+    const thumbsUp = document.createElement('button');
+    thumbsUp.innerHTML = '👍';
+    thumbsUp.title = 'Helpful';
+    thumbsUp.addEventListener('click', function(e) {
+      e.stopPropagation();
+      storeFeedback(messageId, true);
+      thumbsUp.classList.add('active');
+      thumbsDown.classList.remove('active');
+    });
+
+    const thumbsDown = document.createElement('button');
+    thumbsDown.innerHTML = '👎';
+    thumbsDown.title = 'Not helpful';
+    thumbsDown.addEventListener('click', function(e) {
+      e.stopPropagation();
+      storeFeedback(messageId, false);
+      thumbsDown.classList.add('active');
+      thumbsUp.classList.remove('active');
+    });
+
+    feedbackDiv.appendChild(thumbsUp);
+    feedbackDiv.appendChild(thumbsDown);
+
+    // Find the last bot message and append feedback
+    const botMessages = messages.querySelectorAll('.rwa-ai-bot');
+    if (botMessages.length > 0) {
+      const lastBot = botMessages[botMessages.length - 1];
+      // Only add feedback if not already present
+      if (!lastBot.querySelector('.rwa-ai-feedback')) {
+        lastBot.appendChild(feedbackDiv);
+      }
+    }
+  }
+
+  // Store feedback in localStorage
+  function storeFeedback(messageId, helpful) {
+    let feedbacks = JSON.parse(localStorage.getItem('rwaFeedback') || '{}');
+    feedbacks[messageId] = helpful;
+    localStorage.setItem('rwaFeedback', JSON.stringify(feedbacks));
+    // You could also log this for your own analytics later
+    console.log(`Feedback for ${messageId}: ${helpful ? '👍' : '👎'}`);
+  }
+
+  // Generate a unique message ID
+  function generateMessageId() {
+    return 'msg_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4);
+  }
+
+  // Handle sending a message
+  function handleSend(text) {
+    if (!text || !text.trim()) return;
+
+    const userText = text.trim();
+    addMessage(userText, 'user');
+
+    // Show typing indicator
+    showTyping();
+
+    // Disable input while processing
+    input.disabled = true;
+    sendBtn.disabled = true;
+
+    setTimeout(() => {
+      const answer = findAnswer(userText);
+      removeTyping();
+
+      const msgId = generateMessageId();
+      const botMsg = addMessage(answer, 'bot');
+      botMsg.dataset.messageId = msgId;
+
+      // Add feedback buttons
+      addFeedback(msgId, answer);
+
+      // Re-enable input
+      input.disabled = false;
+      sendBtn.disabled = false;
+      input.focus();
+
+      // Clear input
+      input.value = '';
+
+      // Scroll to bottom
+      messages.scrollTop = messages.scrollHeight;
+    }, 600);
+  }
+
+  // ----- OPEN / CLOSE -----
+  function openAI() {
+    windowEl.classList.add('open');
+    trigger.style.display = 'none';
+    setTimeout(() => input.focus(), 300);
+  }
+
+  function closeAI() {
+    windowEl.classList.remove('open');
+    trigger.style.display = 'flex';
+  }
+
+  function resetChat() {
+    // Remove all messages except the first welcome
+    while (messages.children.length > 1) {
+      messages.removeChild(messages.lastChild);
+    }
+    conversation = [];
+    messageCount = 0;
+    // Reset the welcome message text (in case it was changed)
+    const welcome = messages.firstChild;
+    if (welcome && welcome.classList.contains('rwa-ai-bot')) {
+      welcome.innerHTML = '👋 Hi! I\'m your Road Wise Academy assistant.<br>Ask me anything about the website!';
+    }
+    // Clear any stored feedback for this session
+  }
+
+  // ----- EVENT LISTENERS -----
+  if (trigger) trigger.addEventListener('click', openAI);
+  if (closeBtn) closeBtn.addEventListener('click', closeAI);
+  if (resetBtn) resetBtn.addEventListener('click', resetChat);
+
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function() {
+      const text = input.value;
+      handleSend(text);
+    });
+  }
+
+  if (input) {
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const text = this.value;
+        handleSend(text);
+      }
+    });
+  }
+
+  // Quick reply suggestions
+  suggestions.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const question = this.getAttribute('data-question');
+      if (question) {
+        input.value = question;
+        handleSend(question);
+      }
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    const isInside = windowEl.contains(e.target) || trigger.contains(e.target);
+    if (!isInside && windowEl.classList.contains('open')) {
+      closeAI();
+    }
+  });
+
+  // Keyboard shortcut: Ctrl+Shift+A
+  document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.shiftKey && (e.key === 'a' || e.key === 'A')) {
+      e.preventDefault();
+      if (windowEl.classList.contains('open')) {
+        closeAI();
+      } else {
+        openAI();
+      }
+    }
+  });
+
+  // Auto-scroll on load
+  messages.scrollTop = messages.scrollHeight;
+
+  console.log('✅ RWA AI Assistant (Improved) loaded.');
+})();
+</script>
 </body>
 </html>
