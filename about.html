@@ -1480,7 +1480,7 @@
 
 <div class="rwa-ai-assistant">
   <!-- Floating trigger button -->
-  <button class="rwa-ai-trigger" id="rwaAiTrigger" aria-label="Open AI Assistant">
+  <button class="rwa-ai-trigger" id="rwaAiTrigger" type="button" aria-label="Open AI Assistant">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
     </svg>
@@ -1524,8 +1524,14 @@
   position: fixed;
   bottom: 24px;
   right: 24px;
-  z-index: 9999;
+  z-index: 2147483647;
+  max-width: none !important;
+  pointer-events: none;
+  isolation: isolate;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.rwa-ai-assistant > * {
+  pointer-events: auto;
 }
 
 /* Trigger button */
@@ -1767,9 +1773,14 @@
 
 /* Mobile responsive */
 @media (max-width: 480px) {
+  .rwa-ai-assistant {
+    right: 16px;
+    bottom: 16px;
+  }
   .rwa-ai-window {
+    position: fixed;
     width: 100vw;
-    max-width: 100vw;
+    max-width: 100vw !important;
     bottom: 0;
     right: 0;
     border-radius: 16px 16px 0 0;
@@ -2065,7 +2076,11 @@
   }
 
   // ----- EVENT LISTENERS -----
-  if (trigger) trigger.addEventListener('click', openAI);
+  if (trigger) trigger.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openAI();
+  });
   if (closeBtn) closeBtn.addEventListener('click', closeAI);
   if (resetBtn) resetBtn.addEventListener('click', resetChat);
 
@@ -2125,7 +2140,6 @@
 </script>
 </body>
 </html>
-
 
 
 
